@@ -1,0 +1,20 @@
+.header {
+    height: 15vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-bottom: 1px solid;
+}
+
+.iconBurger {
+    position: absolute;
+    top: 6.6vh;
+    left: 7vw;
+}
+
+.iconCart {
+    position: absolute;
+    top: 6vh;
+    right: 7vw;
+}

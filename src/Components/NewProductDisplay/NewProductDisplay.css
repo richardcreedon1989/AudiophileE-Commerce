@@ -1,0 +1,68 @@
+
+.container {
+    background-color: #000000;
+    height: 78vh;
+    /* border-radius: 0 0 10px 10px; */
+    box-shadow: 0 0 10px 0;
+    border-radius: 0 0 10px 10px;
+    
+}
+
+.headPhonesImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0vw -12vh; /* try 20px 10px */ 
+    filter: brightness(99%);
+    mix-blend-mode: normal;
+    opacity: .7;
+}
+
+.newProductContainer {
+    margin-top: -70vh;
+    margin-left: 23vw;
+    position: absolute;
+}
+
+.newProductText {
+    letter-spacing: 3vw;
+    /* align-content: center;
+    text-align: center; */
+    font-size: 12px;
+    opacity: .45;
+    color: #FFFFFF;  
+}
+
+.headPhonesName {
+    color: #FFFFFF;
+    line-height: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+    margin: 10px 0 0 5px;
+}
+
+.headPhonesParagraph {
+    color: #FFFFFF;
+    font-size: 13px;
+    align-content: center;
+    margin: 20px 10px 0px -50px;
+    font-weight: initial;
+    line-height: 20px;
+    mix-blend-mode: normal;
+    opacity: .5;
+    text-align: center;
+    letter-spacing: .5px;
+}
+
+.btnProductInfo {
+    background-color: #D87D4A;
+
+    color: white;
+    width: 140px;
+    height: 48px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    line-height: 25px;
+    border-style: none;
+    margin: 20px 0 0 20px;
+}
