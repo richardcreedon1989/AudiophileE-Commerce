@@ -1,0 +1,44 @@
+.btnProductInfoOrangeTheme {
+    background-color: #da753a;
+    color: white;
+    width: 45vw;
+    height: 7vh;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    font-size: 3vw;
+    line-height: 19px;
+    border-style: none;
+    filter: brightness(100%);
+    mix-blend-mode: normal; 
+}
+
+.btnProductInfoBlackTheme {
+    background-color: #000000;
+    color: white;
+    width: 45vw;
+    height: 7.5vh;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    font-size: 3vw;
+    line-height: 19px;
+    border-style: none;
+    filter: brightness(100%);
+    mix-blend-mode: normal; 
+}
+
+.btnProductInfoTransparentTheme {
+    background-color: transparent;
+    border-style: solid black;
+    border-width: thin;
+    color: black;
+    width: 45vw;
+    height: 7.5vh;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    font-size: 3vw;
+    line-height: 19px;
+    filter: brightness(100%);
+    mix-blend-mode: normal; 
+}
+
+

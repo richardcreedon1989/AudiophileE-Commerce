@@ -1,0 +1,26 @@
+.ProductTilesZX7Container {
+    width: 90%;
+    text-align: center;
+    margin: 3vh auto 3vh auto;
+    border-radius: 20px;
+}
+
+.ProductTilesZX7BackgroundImage {
+    max-width:100%;
+    max-height:100%;
+    border-radius: 10px;
+}
+
+.ProductTilesZX7InnerContainerTextButtonGroup { 
+  margin-top: -35vh;
+  margin-left: -34vw;
+}
+
+.ProductTilesZX7ImageTextHeading {
+  margin-bottom: 5vh;
+  font-weight: 900;
+  font-size: 7vw;
+  margin-left: 5vw;
+  letter-spacing: 2px;
+}
+

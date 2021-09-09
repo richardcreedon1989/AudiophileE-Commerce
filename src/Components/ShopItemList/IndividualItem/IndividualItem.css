@@ -1,0 +1,48 @@
+.IndividualItemContainer {
+    background-color: #F1F1F1;
+    margin: 70px 20px 30px 20px;
+    border-style: none;
+    border-color: #F1F1F1;
+    height: 165px;
+    border-radius: 5px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.IndividualItemImageEARPHONES {
+    width: 140px;
+    height: 140px;
+    margin-top: -40px;
+    /* margin: -50px 0 0 100px; */
+}
+
+.IndividualItemImageHEADPHONES {
+    width: 120px;
+    height: 130px;
+    margin-top: -50px;
+    /* margin: -50px 0 0 100px; */
+}
+
+.IndividualItemImageSPEAKERS {
+    width: 84px;
+    height: 101px;
+    margin-top: -50px;
+    /* margin: -50px 0 0 100px; */
+}
+
+.IndividualItemProductTextEARPHONES {
+    color: black;
+    margin-top: -10px;
+    letter-spacing: 2px;
+}
+.IndividualItemProductTextHEADPHONES {
+    color: black;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.IndividualItemProductTextSPEAKERS {
+    color: black;
+    margin-top: 40px;
+    letter-spacing: 2px;
+}

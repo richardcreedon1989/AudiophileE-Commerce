@@ -1,5 +1,6 @@
 import "./NewProductDisplay.css"
 import HeadPhonesImage from "../../assets/image-header.jpg"
+import Button from "../Button/Button"
 
 const NewProductDisplay = () => {
     return ( 
@@ -16,9 +17,7 @@ const NewProductDisplay = () => {
             Experience natural, lifelike audio and exceptional build quality made for 
             the passionate music enthusiast.
             </p>
-            <button className="btnProductInfo"> 
-                SEE PRODUCT
-            </button>
+            <Button theme="orange" />
         </div>
         
     </div>
