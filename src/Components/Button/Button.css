@@ -1,44 +1,110 @@
 .btnProductInfoOrangeTheme {
     background-color: #da753a;
     color: white;
-    width: 45vw;
-    height: 7vh;
+    width: 100px;
+    height: 30px;
     font-weight: 700;
-    letter-spacing: 2.5px;
-    font-size: 3vw;
-    line-height: 19px;
+    letter-spacing: 1.5px;
+    font-size: 7px;
+    line-height: 10px;
     border-style: none;
     filter: brightness(100%);
     mix-blend-mode: normal; 
+    padding-left: 8px;
 }
 
 .btnProductInfoBlackTheme {
-    background-color: #000000;
-    color: white;
-    width: 45vw;
-    height: 7.5vh;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    font-size: 3vw;
-    line-height: 19px;
-    border-style: none;
-    filter: brightness(100%);
-    mix-blend-mode: normal; 
+  background-color: #000000;
+  color: white;
+  width: 120px;
+  height: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  line-height: 10px;
+  border-style: none;
+  filter: brightness(100%);
+  mix-blend-mode: normal; 
+  padding-left: 8px;
 }
 
 .btnProductInfoTransparentTheme {
-    background-color: transparent;
-    border-style: solid black;
-    border-width: thin;
-    color: black;
-    width: 45vw;
-    height: 7.5vh;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    font-size: 3vw;
-    line-height: 19px;
-    filter: brightness(100%);
-    mix-blend-mode: normal; 
+  background-color: transparent;
+  border-style: solid black;
+  border-width: thin;
+  color: black;
+  width: 120px;
+  height: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  line-height: 10px;
+  filter: brightness(100%);
+  mix-blend-mode: normal; 
+  padding-left: 8px;
 }
+
+@media screen and (min-width: 355px) {
+    .btnProductInfoOrangeTheme {
+        width: 130px;
+        height: 40px;
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+  .btnProductInfoOrangeTheme {
+      width: 200px;
+      height: 60px;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .btnProductInfoOrangeTheme {
+      width: 260px;
+      height: 80px;
+      letter-spacing: 2.4px;
+      font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .btnProductInfoOrangeTheme {
+      width: 300px;
+      height: 100px;
+      letter-spacing: 3.5px;
+      font-size: 27px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .btnProductInfoOrangeTheme {
+      width: 400px;
+      height: 150px;
+      letter-spacing: 6px;
+      font-size: 34px;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+  .btnProductInfoOrangeTheme {
+      width: 550px;
+      height: 200px;
+      letter-spacing: 8px;
+      font-size: 45px;
+  }
+}
+
+
+/* @media screen and (min-width: 600px) {
+    .btnProductInfoOrangeTheme {
+        width: 32vw;
+    }
+} */
+
+
 
 
