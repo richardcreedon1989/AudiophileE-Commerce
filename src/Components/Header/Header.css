@@ -1,20 +1,96 @@
 .header {
-    height: 15vh;
-    background-color: #000000;
+    height: 100px;
+    background-color:#161616;
     display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
-    border-bottom: 1px solid;
+    justify-content: space-around; 
+    align-items: center; 
+    border-bottom: 1px solid white;
+}
+
+.desktop-header {
+  display: none;
 }
 
 .iconBurger {
-    position: absolute;
-    top: 6.6vh;
-    left: 7vw;
+    order: 1;
+}
+.iconLogo {
+    order: 2;
+}
+.iconCart {
+    order: 3;
+} 
+
+/* @media screen and (max-width: 300px){ 
+  .header {
+
+  }}
+   */
+  
+@media screen and (min-width: 600px){ 
+  .header {
+    height: 12%;
+    background-color: #161616; 
+    justify-content: none;
+    border-bottom: 1px solid white;
+}
+.iconBurger {
+  height: 2.5vh;
+}
+.iconLogo {
+  height: 3.5vh;
+  margin-left: -10vw;
+}
+.iconCart {
+  height: 3vh;
+  margin-left: 40vw;
+} 
+}
+  
+@media screen and (min-width: 1400px){ 
+  .header {
+    height: 12%;
+    background-color: #161616; 
+    justify-content: none;
+    border-bottom: none;
+
+}
+.iconBurger {
+  display: none;
+}
+.iconLogo {
+  height: 4vh;
+  margin-left: 2.4vw;
+  order: 1;
+
+}
+.iconCart {
+  height: 3vh;
+  margin-left: 5vw;
+  padding-right: 2vw;
+  order: 3;
+} 
+.desktop-header {
+  display: flex;
+  color: red;
+  order: 2;
 }
 
-.iconCart {
-    position: absolute;
-    top: 6vh;
-    right: 7vw;
+.desktop-menu-items {
+  list-style-type: none;
+  justify-content: space-around;
+  font-size: 1.1vw;
+  letter-spacing: 3px;
+  margin-right: 2.5vw;
+  align-content: space-around;
+  color: white;
+  font-weight: bolder;
 }
+}
+  
+
+
+
+
+
+

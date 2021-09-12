@@ -1,11 +1,9 @@
 import "./NewProductDisplay.css"
-import HeadPhonesImage from "../../assets/image-header.jpg"
 import Button from "../Button/Button"
 
 const NewProductDisplay = () => {
     return ( 
-    <div className="container"> 
-        <img className="headPhonesImage" src={HeadPhonesImage} alt="headphones" />
+    // <div className="container"> 
         <div className="newProductContainer"> 
             <div className="newProductText">  
                 NEW PRODUCT 
@@ -20,7 +18,7 @@ const NewProductDisplay = () => {
             <Button theme="orange" />
         </div>
         
-    </div>
+    // </div>
     )
 }
 
