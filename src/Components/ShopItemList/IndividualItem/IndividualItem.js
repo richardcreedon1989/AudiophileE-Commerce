@@ -13,7 +13,7 @@ const displayProducts = () => {
         return(
             <div className={`${className}Container`} > 
                 <img className={`${className}Image${item.name}`} src={item.image} alt="select button" />
-                <h5 className={`${className}ProductText${item.name}`}> 
+                <h5 className={`${className}ProductText${item.name} individual-item-text`}> 
                 {item.name}
                 </h5> 
                 <p className={`${className}Shop`}> SHOP <img className={`${className}ShopIcon`} src={iconArrowRight} alt="select button" /> </p>
@@ -24,7 +24,7 @@ const displayProducts = () => {
 
 const IndividualItem = () => {
     return(
-        <div> 
+        <div className="items-container"> 
             {displayProducts()}
         </div>
     )

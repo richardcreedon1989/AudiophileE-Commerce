@@ -5,15 +5,15 @@ const className = "ProductTilesZX7"
 
 const ProductTileZX7 = () => {
     return(
-              <div className={`${className}Container`}>
-                      <img className={`${className}BackgroundImage`} src={backgroundImage} alt="Speaker"/>    
-                      <div className={`${className}InnerContainerTextButtonGroup`}>
-                        <div className={`${className}ImageTextHeading`}> 
-                            ZX7 SPEAKER 
-                        </div>
-                        <Button theme="transparent" />                        
-                      </div>
-                </div>
+            <div className={`${className}BackgroundImage`}>
+                  <div className={`${className}InnerContainerTextButtonGroup`}>
+                    <div className={`${className}ImageTextHeading`}> 
+                        ZX7 SPEAKER 
+                    </div>
+                    <Button theme="transparent" />                        
+                  </div>
+            </div>
+              
     )
 }
 

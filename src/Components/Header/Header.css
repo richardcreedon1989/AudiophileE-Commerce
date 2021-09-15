@@ -1,6 +1,6 @@
 .header {
     height: 100px;
-    background-color:#161616;
+    background-color:transparent;
     display: flex;
     justify-content: space-around; 
     align-items: center; 
@@ -29,8 +29,7 @@
   
 @media screen and (min-width: 600px){ 
   .header {
-    height: 12%;
-    background-color: #161616; 
+    height: 12%; 
     justify-content: none;
     border-bottom: 1px solid white;
 }
@@ -49,8 +48,7 @@
   
 @media screen and (min-width: 1400px){ 
   .header {
-    height: 12%;
-    background-color: #161616; 
+    height: 12%; 
     justify-content: none;
     border-bottom: none;
 

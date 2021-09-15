@@ -2,13 +2,14 @@ html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
   font-family: 'Manrope', sans-serif;
 }
 
-.divtest {
-  margin: 1000px 0 1000px 0;
+.container-padding {
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
 .product-container {
   text-align: center;
   justify-content: center;
@@ -19,38 +20,42 @@ body {
 .hrDesktop {
   display: none;
 }
-.imageContainer {
-  background-image: url("./assets/image-header.jpg");
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center center;
-  height: 500px;
-   /* Cant be 100 or causes text to shift when scrolling */
+
+.menu {
+  z-index: -1;
+  color: black;
+  background-color: white;
 }
-@media screen and (min-width: 300px){ 
-  .imageContainer {
+
+.imageContainer {
     background-image: url("./assets/image-header.jpg");
     background-repeat:no-repeat;
     background-size:contain;
-    background-position:center top;
+    background-position:center center;
+    height: 500px;
+}
+
+@media screen and (min-width: 300px){ 
+    .imageContainer {
+        background-position:center top;
+        height: 650px;
+    }
+}
+
+@media screen and (min-width: 400px){ 
+  .imageContainer {
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 490px){ 
+  .imageContainer {
     height: 1000px;
-
   }}
-
-
-@media screen and (min-width: 430px){ 
-.imageContainer {
-  background-image: url("./assets/image-header.jpg");
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center top;
-  height: 1000px;
-}}
 
 @media screen and (min-width: 600px){ 
   .imageContainer {
     background-image: url("./assets/image-header-tablet.jpg"); /* Maybe use mobile image here */
-    background-repeat:no-repeat;
     background-size:cover;
     background-position:center center;
     height: 800px;
@@ -58,26 +63,15 @@ body {
 
 @media screen and (min-width: 800px){ 
   .imageContainer {
-    background-image: url("./assets/image-header-tablet.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center center;
     height: 1000px;
   }}
 
 @media screen and (min-width: 1000px){ 
     .imageContainer {
-      background-image: url("./assets/image-header-tablet.jpg");
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position:center center;
       height: 1200px;
     }}
 @media screen and (min-width: 1200px){ 
   .imageContainer {
-    background-image: url("./assets/image-header-tablet.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
     background-position:center top;
     height: 1400px;
   }
@@ -89,133 +83,30 @@ body {
   @media screen and (min-width: 1400px){ 
     .imageContainer {
       background-image: url("./assets/image-hero.jpg");
-      background-repeat:no-repeat;
       background-size:cover;
       background-position:center top;
       height: 1200px;
-    }}
+    }
+    .container-padding {
+      padding-left: 10%;
+      padding-right: 10%;
+  }
+}
 
 @media screen and (min-width: 2000px){ 
   .imageContainer {
-      background-image: url("./assets/image-hero.jpg");
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position:center top;
       height: 2000px;
   } 
 }
 
 @media screen and (min-width: 3500px){ 
   .imageContainer {
-      background-image: url("./assets/image-hero.jpg");
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position:center top;
       height: 2500px;
   } 
 }
-  
 
-
-
-  /* 
-img {
-  background-size: cover;
-  background-color: red;
-  max-width: 100%;
-  z-index: 1;
-  display: inline-block;
-} */
-
-/* * {
-  font-family: 'Manrope', sans-serif;
-  margin: 0;
-} */
-
-/* REQUIRED FOR MEDIA QUERY TO WORK <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
-
-/* .parentContainer { */
-  
-  /* width: 500px;
-  margin-bottom: 500px;
-  background-color: red;
-  filter: brightness(60%); */
-/* } */
-
-/* .mobileBackgroundImage {
-  min-height: 100vh;
-  background-image: url("./assets/image-header.jpg");
-  margin-bottom: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;  
-  background-position: center top;
-} */
-/* @media screen and (min-height: 424px) and (min-width: 270px){ 
-  .mobileBackgroundImage {
-  min-height: 100vh;
-  background-image: url("./assets/image-header.jpg");
-  margin-bottom: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;  
-  background-position: center top;
-  background-color: #161616;
-  }
-} */
-
-/* height less than 430 width > 258 */
-/* @media screen and (max-height: 424px) and (min-width: 200px){ 
-  .mobileBackgroundImage {
-  min-height: 100vh;
-  background-image: url("./assets/image-header.jpg");
-  margin-bottom: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;  
-  background-position: center top;
-  background-color: black;
-  }
-  } */
-
-/* @media screen and (min-height: 428px) and (min-width: 258px) and (max-width: 566) { 
-  .mobileBackgroundImage {
-  min-height: 100vh;
-  background-image: url("./assets/image-header.jpg");
-  margin-bottom: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;  
-  background-position: center top;
-  background-color: #161616;
-  }
-}  */
-
-
-
-/* @media screen and (min-width: 600px){
-  .mobileBackgroundImage {
-    background-image: url("./assets/image-header-tablet.jpg");
-    margin-bottom: 500px;
-    min-height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat; 
-    /* background-color:#161616; */
-    /* background-position: center top; */
-
-  /* }
-}  */
-
-
-/* .tabletBackgroundImage {
-  background-image: url("./assets/image-header-tablet.jpg");
-  margin-bottom: 500px;
-  min-height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat; 
-}  */
-
-/* .imageTag {
-  height: 500px;
-  width: 100%;
-  object-fit: cover;
-  background-color: red;
-} */
-
-/*background color to match header image for #161616 */
+@media screen and (min-width: 4000px){ 
+  .imageContainer {
+      height: 3500px;
+  } 
+}

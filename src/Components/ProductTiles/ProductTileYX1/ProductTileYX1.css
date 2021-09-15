@@ -1,31 +1,84 @@
 .ProductTileYX1Container {
-    width: 90%;
+    width: 100%;
     text-align: center;
-    margin: 19vh auto 50px auto;
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.ProductTileYX1Image {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-
+.ProductTileYX1BackgroundImage {
+    background-image:url("../../../assets/image-earphones-yx1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 200px;
+    order: 1;
 }
+
 
 .ProductTileYX1ProductInfoContainer {
-  max-width: 100%;
-  height: 24vh;
-  border-radius: 10px;
-  background-color: #F1F1F1;
-  margin: 2.5vh auto 0 auto;
-  padding: 7vh 15vw 0 0;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    background-size: cover;
+    height: 200px;
+    order: 2;
+    margin-top: 30px;   
+    text-align: left;
+    padding-left: 20px;
 }
 
 .ProductTileYX1ProductText {
-  font-size: 30px;
-  font-weight: 900;
-  letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding-top: 20px;
 }
 
-.ProductTileYX1Button {
-  margin: 5vh 20vw 0 0;
+@media screen and (min-width: 600px) {
+  .ProductTileYX1Container {
+      flex-direction: row;
+  }
+
+  .ProductTileYX1BackgroundImage {
+      background-image:url("../../../assets/image-earphones-tablet-yx1.jpg");
+      width: 50%;
+  }
+
+  .ProductTileYX1ProductInfoContainer {
+      width: 50%;
+      margin-top: 0;
+      margin-left: 20px;
+  }
 }
+
+@media screen and (min-width: 1400px) {
+  .ProductTileYX1BackgroundImage {
+      background-image:url("../../../assets/image-earphones-desktop-yx1.jpg");
+      width: 50%;
+  }
+
+  .ProductTileYX1ProductInfoContainer {
+      width: 50%;
+      margin-top: 0;
+      margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+
+  .ProductTileYX1BackgroundImage {
+      height: 400px;
+  }
+
+
+  .ProductTileYX1ProductInfoContainer {
+      height: 400px;
+  }
+
+  .ProductTileYX1ProductText {
+      font-size: 70px;
+      letter-spacing: 4.5px;
+  }
+}
+
