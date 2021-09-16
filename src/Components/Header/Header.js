@@ -4,9 +4,13 @@ import iconCart from "../../assets/icon-cart.svg"
 import iconLogo from "../../assets/logo.svg"
 
 
-const Header = () => {
+
+const Header = (props) => {
+    const headerBackground = () => {
+      return props.color === "black" ? "background-black" : "background-transparent"
+    }
     return (
-        <nav className="header"> 
+        <nav className={`${headerBackground()} header`}> 
             <ul className="desktop-header">
                 <li className="desktop-menu-items"> HOME </li>
                 <li className="desktop-menu-items"> HEADPHONES</li>

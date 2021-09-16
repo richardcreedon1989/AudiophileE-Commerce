@@ -1,0 +1,52 @@
+.IndividualCategoryProductContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+.IndividualCategoryProductImageContainer {
+  order: 1;
+  height: 260px;
+  width: 260px;
+
+}
+
+.IndividualCategoryProductTextContainer {
+  order: 2;
+  height: 260px;
+  width: 260px;
+}
+
+.IndividualCategoryProductNewProductHeading {
+  letter-spacing: 4px;
+  font-size: 10px;
+  margin-top: 20px;
+  color: #D87D4A;
+  text-align: center;
+}
+
+.IndividualCategoryProductProductHeading {
+  letter-spacing: 4px;
+  font-size: 18px;
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.IndividualCategoryProductParagraph {
+  letter-spacing: 1px;
+  font-size: 10px;
+  margin: 20px 20px 20px 20px;
+  color:#000000;
+  opacity: .6;
+  text-align: center;
+}
+
+.IndividualCategoryProductButton {
+  text-align: center;
+}

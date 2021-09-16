@@ -76,20 +76,27 @@ body {
     height: 1400px;
   }
   .hrDesktop {
-    display: block;
-    margin: 0 8vw 0 8vw;
-  }}
+    display:  none;
+  }
+}
 
-  @media screen and (min-width: 1400px){ 
-    .imageContainer {
+@media screen and (min-width: 1400px){ 
+  .imageContainer {
       background-image: url("./assets/image-hero.jpg");
       background-size:cover;
       background-position:center top;
       height: 1200px;
-    }
-    .container-padding {
+  }
+  .container-padding {
       padding-left: 10%;
       padding-right: 10%;
+  }
+  .hrDesktop {
+      display: block;
+      margin: 0 0vw 0 0vw;
+      height: 1px;
+      background-color: grey;
+      border: none;
   }
 }
 
