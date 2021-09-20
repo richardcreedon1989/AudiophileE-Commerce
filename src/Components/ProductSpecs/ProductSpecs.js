@@ -1,9 +1,3 @@
-
-import "./CategoryProductList.css"
-import IndividualCategoryProduct from "../IndividualCategoryProduct/IndividualCategoryProduct"
-
-import ProductSpecs from "../ProductSpecs/ProductSpecs"
-
 import HeadPhonesImage1Mobile from "../../assets/image-category-page-preview-mobile3.jpg"
 import HeadPhonesImage1Tablet from "../../assets/image-category-page-preview-tablet3.jpg"
 import HeadPhonesImage1Desktop from "../../assets/image-category-page-preview-desktop3.jpg"
@@ -22,14 +16,43 @@ import SpeakerImage2 from "../../assets/image-category-page-preview-speaker2-mob
 
 import EarphonesImage1 from "../../assets/image-category-page-preview-earphones-mobile.jpg"
 
-const className = "CategoryProductList"
-
-const Products = [
+const ProductSpecs = [
 
   { category: "HEADPHONES", product: "XX99 MARK II HEADPHONES",  imageSourceMobile: HeadPhonesImage1Mobile, 
   imageSourceTablet: HeadPhonesImage1Tablet, imageSourceDesktop: HeadPhonesImage1Desktop,
   newProduct: "" , description: `The new XX99 Mark II headphones is the pinnacle of pristine audio. 
-  It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.`
+  It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.`, 
+  features: `Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those 
+  who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business 
+  call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.
+
+  The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. 
+  It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. 
+  Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, 
+  cutting-edge technology, and a modern design aesthetic.`,
+  
+  includes: [
+    {
+      "quantity": 2,
+      "item": "Earphone unit"
+    },
+    {
+      "quantity": 6,
+      "item": "Multi-size earplugs"
+    },
+    {
+      "quantity": 1,
+      "item": "User manual"
+    },
+    {
+      "quantity": 1,
+      "item": "USB-C charging cable"
+    },
+    {
+      "quantity": 1,
+      "item": "Travel pouch"
+    }
+  ],
   },
 
   { category: "HEADPHONES", product: "XX99 MARK I HEADPHONES", imageSourceMobile: HeadPhonesImage2Mobile, 
@@ -48,49 +71,4 @@ const Products = [
 
 ]
 
-const Speakers = [
-
-    {
-      category: "SPEAKERS", product: "ZX9 SPEAKER", imageSource: SpeakerImage1, newProduct: "", 
-      description: `Upgrade your sound system with the all new ZX9 active speaker. 
-      It’s a bookshelf speaker system that offers truly wireless connectivity
-      -- creating new possibilities for more pleasing and practical audio setups.`,
-    }, 
-
-    {
-      category: "SPEAKERS", product: "ZX7 SPEAKER", imageSource: SpeakerImage2, newProduct: "", 
-      description: `Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf 
-      speaker uses high-end audiophile components that represents the top of the line powered 
-      speakers for home or studio use.`,
-    }
-
-]
-
-const Earphones = [
-  
-    {
-      category: "EARPHONES", product: "YX1 WIRELESS EARPHONES", imageSource: EarphonesImage1, newProduct: "", 
-      description: `Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
-      Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.`
-    }
-
-]
-const displayCategoryProducts = () => { 
-    return Products.map(({category, product, description,newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop}) => {
-      return <IndividualCategoryProduct category={category} product={product} imageSourceMobile={imageSourceMobile}
-            imageSourceTablet={imageSourceTablet} imageSourceDesktop={imageSourceDesktop} description={description} 
-            newProduct={newProduct}  
-            />
-  })
-}
-
-const CategoryProductList = (props) => {
-
-  return (
-    <>
-    {displayCategoryProducts()}
-    </>
-  )
-}
-
-export default CategoryProductList
+export default ProductSpecs

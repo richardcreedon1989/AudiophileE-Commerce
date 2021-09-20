@@ -8,3 +8,19 @@
   font-size: 22px;
   letter-spacing: 2px;
 }
+
+@media screen and (min-width: 600px) {
+  .CategoryTitleHeading {
+      height: 240px;
+      font-size: 40px;
+      letter-spacing: 3px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .CategoryTitleHeading {
+      height: 180px;
+      font-size: 40px;
+      letter-spacing: 4px;
+  }
+}

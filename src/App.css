@@ -38,20 +38,40 @@ body {
 @media screen and (min-width: 300px){ 
     .imageContainer {
         background-position:center top;
-        height: 650px;
+        height: 550px;
     }
 }
 
+@media screen and (min-width: 350px){ 
+  .imageContainer {
+      background-position:center top;
+      height: 630px;
+  }
+}
+
 @media screen and (min-width: 400px){ 
+  .imageContainer {
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 440px){ 
   .imageContainer {
     height: 800px;
   }
 }
 
-@media screen and (min-width: 490px){ 
+@media screen and (min-width: 500px){ 
   .imageContainer {
-    height: 1000px;
-  }}
+      height: 900px;
+  }
+}
+
+@media screen and (min-width: 560px){ 
+  .imageContainer {
+      height: 1000px;
+  }
+}
 
 @media screen and (min-width: 600px){ 
   .imageContainer {

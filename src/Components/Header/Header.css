@@ -1,5 +1,5 @@
 .header {
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: space-around; 
     align-items: center; 
@@ -13,7 +13,7 @@
     background-color: transparent;
 }
 .desktop-header {
-  display: none;
+    display: none;
 }
 
 .iconBurger {
@@ -39,8 +39,7 @@
       margin-right: -10vw;
   }
   .iconLogo {
-      height: 30px;
-    
+      height: 30px; 
   }
   .iconCart {
       height: 40px;
@@ -51,7 +50,7 @@
   
 @media screen and (min-width: 1400px){ 
   .header {
-      height: 120px; 
+      height: 180px; 
       justify-content: none;
       border-bottom: none;
       padding-left: 5%;
@@ -65,8 +64,8 @@
   .iconLogo {
       height: 3vh;
       order: 1;
-      margin-left: -3vw;
-      margin-right: 3vw;
+      margin-left: -8vw;
+      padding-right: 0vw;
   }
 
   .iconCart {

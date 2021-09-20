@@ -8,8 +8,8 @@ import "../../App.css"
 import CategoryProductList from "../CategoryProductList/CategoryProductList"
 
 const CategoryPage = () => {
-  return (
 
+  return (
       <div> 
         <Header color="black"/>
         <hr className="hrDesktop" />
@@ -21,7 +21,6 @@ const CategoryPage = () => {
         </div>
         <Footer />
       </div>
-
   )
 }
 
