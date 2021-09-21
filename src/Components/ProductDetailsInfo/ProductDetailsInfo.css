@@ -2,8 +2,6 @@
 .ProductDetailsInfoContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
   max-width: 100%;
@@ -14,7 +12,6 @@
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  justify-content: center;
 }
 
 
@@ -29,7 +26,7 @@
   font-size: 10px;
   margin-top: 20px;
   color: #D87D4A;
-  text-align: center;
+  text-align: left;
 }
 
 .ProductDetailsInfoProductHeading {
@@ -38,22 +35,159 @@
   font-weight: bolder;
   margin-top: 20px;
   color: black;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-
+  text-align: left;
+  margin-right: 30%;
 }
 
 .ProductDetailsInfoParagraph {
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 0px;
+  color:#000000;
+  opacity: .5;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.ProductDetailsInfoPrice {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+}
+
+.ProductDetailsInfoFeatures {
+  font-size: 24px;
+  letter-spacing: .8px;
+  line-height: 36px;
+}
+
+.ProductDetailsInfoFeaturesText {
+  font-size: 15px;
+  color:#000000;
+  opacity: .5;
+  text-align: left;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.ProductDetailsInfoBoxContentsContainer {
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.ProductDetailsInfoBoxContentsHeading{
+  font-size: 24px;
+  letter-spacing: .8px;
+}
+
+.ProductDetailsInfoBoxContentsQuantity {
+  color: #D87D4A;
+  margin-right: 25px;
+}
+
+.ProductDetailsInfoBoxContentsText {
+  margin-top: 10px;
+}
+
+.ProductDetailsInfoImageGroup {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+/* 
+@media screen and (min-width: 600px) {
+  .ProductDetailsInfoContainer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .ProductDetailsInfoTextContainer {
+    margin-top: 50px;
+  }
+  
+  .ProductDetailsInfoNewProductHeading {
+    letter-spacing: 5px;
+    font-size: 15px; 
+  }
+  
+  .ProductDetailsInfoProductHeading {
+    letter-spacing: 6px;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .ProductDetailsInfoParagraph {
+    letter-spacing: 3px;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 20px 10% 50px 10%;
+    color:#000000;
+    opacity: .6;
+    text-align: center;
+  }
+  
+  .ProductDetailsInfoButton {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1400px) { 
+  .ProductDetailsInfoContainer {
+  flex-direction: row;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 150px;
+}
+
+.ProductDetailsInfoImageContainer {
+  order: 1;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.ProductDetailsInfoTextContainer {
+  margin-top: 10px;
+  order: 2;
+  width: 50%;
+  height: auto;
+  padding-left: 80px;
+
+}
+
+.ProductDet  ailsInfoNewProductHeading {
+  letter-spacing: 4px;
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+.ProductDetailsInfoProductHeading {
+  letter-spacing: 4px;
+  line-height: 60px;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+  text-align: left;
+  margin-left: 0px;
+}
+
+.ProductDetailsInfoParagraph {
+  letter-spacing: 2px;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0px 20px 20px 0px;
   color:#000000;
   opacity: .6;
-  text-align: center;
+  text-align: left;
 }
 
 .ProductDetailsInfoButton {
-  text-align: center;
+  text-align: left;
+  margin-top: 50px;
 }
+} */

@@ -11,10 +11,16 @@ import HeadPhonesImage3Mobile from "../../assets/image-category-page-preview-mob
 import HeadPhonesImage3Tablet from "../../assets/image-category-page-preview-tablet.jpg"
 import HeadPhonesImage3Desktop from "../../assets/image-category-page-preview-desktop.jpg"
 
-import SpeakerImage1 from "../../assets/image-category-page-preview-speaker-mobile.jpg"
-import SpeakerImage2 from "../../assets/image-category-page-preview-speaker2-mobile.jpg"
+import GroupImage1Mobile from "../../assets/XX99Category/mobile-xx99-category-image-gallery-1.jpg"
+import GroupImage2Mobile from "../../assets/XX99Category/mobile-xx-99-category-image-gallery-2.jpg"
+import GroupImage3Mobile from "../../assets/XX99Category/mobile-xx99-category-image-gallery-3.jpg"
 
-import EarphonesImage1 from "../../assets/image-category-page-preview-earphones-mobile.jpg"
+
+
+// import SpeakerImage1 from "../../assets/image-category-page-preview-speaker-mobile.jpg"
+// import SpeakerImage2 from "../../assets/imag e-category-page-preview-speaker2-mobile.jpg"
+
+// import EarphonesImage1 from "../../assets/image-category-page-preview-earphones-mobile.jpg"
 
 const ProductSpecs = [
 
@@ -22,7 +28,8 @@ const ProductSpecs = [
   imageSourceTablet: HeadPhonesImage1Tablet, imageSourceDesktop: HeadPhonesImage1Desktop,
   newProduct: "" , description: `The new XX99 Mark II headphones is the pinnacle of pristine audio. 
   It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.`, 
-  features: `Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those 
+  features: 
+  `Featuring a genuine leather head strap and premium earcup s, these headphones deliver superior comfort for those 
   who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business 
   call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.
 
@@ -30,8 +37,9 @@ const ProductSpecs = [
   It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. 
   Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, 
   cutting-edge technology, and a modern design aesthetic.`,
+  GroupImage1Mobile, GroupImage2Mobile, GroupImage3Mobile ,
   
-  includes: [
+  includes: [ 
     {
       "quantity": 2,
       "item": "Earphone unit"

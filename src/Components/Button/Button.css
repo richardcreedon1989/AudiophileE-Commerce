@@ -1,11 +1,11 @@
 .btnProductInfoOrangeTheme {
     background-color: #da753a;
     color: white;
-    width: 100px;
-    height: 30px;
+    width: 160px;
+    height: 48px;
     font-weight: 700;
     letter-spacing: 1.5px;
-    font-size: 7px;
+    font-size: 13px;
     line-height: 10px;
     border-style: none;
     filter: brightness(100%);
@@ -16,11 +16,11 @@
 .btnProductInfoBlackTheme {
   background-color: #000000;
   color: white;
-  width: 120px;
-  height: 40px;
+  width: 160px;
+  height: 48px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 10px;
   border-style: none;
   filter: brightness(100%);
@@ -33,18 +33,18 @@
   border-style: solid black;
   border-width: thin;
   color: black;
-  width: 120px;
-  height: 40px;
+  width: 160px;
+  height: 48px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 10px;
   filter: brightness(100%);
   mix-blend-mode: normal; 
   padding-left: 8px;
 }
 
-@media screen and (min-width: 355px) {
+/* @media screen and (min-width: 355px) {
     .btnProductInfoOrangeTheme {
         width: 130px;
         height: 40px;
@@ -63,9 +63,9 @@
       letter-spacing: 2px;
       font-size: 11px;
     }
-}
+} */
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 600px) {
   .btnProductInfoOrangeTheme {
       width: 120px;
       height: 50px;
@@ -84,9 +84,9 @@
       letter-spacing: 1.5px;
       font-size: 10px;
   }
-}
+} */
 
-@media screen and (min-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
   .btnProductInfoOrangeTheme {
     width: 240px;
     height: 70px;
@@ -168,7 +168,7 @@
     letter-spacing: 8px;
     font-size: 45px;
   }
-}
+} */
 
 
 /* @media screen and (min-width: 600px) {

@@ -7,7 +7,7 @@ import iconLogo from "../../assets/logo.svg"
 
 const Header = (props) => {
     const headerBackground = () => {
-      return props.color === "black" ? "background-black" : "background-transparent"
+        return props.color === "black" ? "background-black" : "background-transparent"
     }
     return (
         <nav className={`${headerBackground()} header`}> 
