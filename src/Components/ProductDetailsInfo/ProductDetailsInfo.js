@@ -35,16 +35,25 @@ const ProductDetailsInfo = () => {
     window.addEventListener('resize', handleResize)
   })
 
+  // const sourceDecider = () => {
+  //   if(windowSize <= 600) {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.mobile}`
+  //   } else if (windowSize <= 1400) {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.tablet}`
+  //   } else {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.desktop}`
+  //   }
+  // } //Neccessary to store the images or else resize redownloads images and takes too long
+
   const sourceDecider = () => {
     if(windowSize <= 600) {
-      return process.env.PUBLIC_URL + `${data[0].gallery.first.mobile}`
+      return "mobile"
     } else if (windowSize <= 1400) {
-      return process.env.PUBLIC_URL + `${data[0].gallery.first.tablet}`
+      return "tablet"
     } else {
-      return process.env.PUBLIC_URL + `${data[0].gallery.first.desktop}`
+      return "desktop"
     }
-  } //Neccessary to store the images or else resize redownloads images and takes too long
-
+  } 
   console.log("data", process.env.PUBLIC_URL + `${data[0].gallery.first}.${sourceDecider()}`)
 
   //Return ==> data [object Object].desktop
@@ -72,7 +81,7 @@ const ProductDetailsInfo = () => {
           {IncludedItems()}
         </div>
         <div>
-          {console.log("data", `${process.env.PUBLIC_URL}${data[0].gallery.first[sourceDecider()]}`)}
+          {console.log("data123", `${process.env.PUBLIC_URL}${data[0].gallery.first[sourceDecider()]}`)}
           
             <img className={`${className}ImageGroup`} src={process.env.PUBLIC_URL + `${data[0].gallery.first}.${sourceDecider()}`} alt="product" />
             <img className={`${className}ImageGroup`} src={`${process.env.PUBLIC_URL}${data[0].gallery.first[sourceDecider()]}`} alt="product" />
