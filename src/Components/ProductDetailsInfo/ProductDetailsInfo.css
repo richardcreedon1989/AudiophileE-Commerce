@@ -4,7 +4,7 @@
   flex-direction: column;
   margin-top: 50px;
   margin-bottom: 50px;
-  max-width: 100%;
+  max-width: 1200px;
   box-sizing: border-box;
 }
 
@@ -89,12 +89,6 @@
   margin-top: 10px;
 }
 
-.ProductDetailsInfoImageGroup {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  justify-content: center;
-}
 
 /* 
 @media screen and (min-width: 600px) {
