@@ -1,12 +1,11 @@
 import "./ProductDetailsInfo.css"
 
-
+import {useState, useEffect} from "react"
 import Image from "../../assets/category-image-product-xx99-mobile.jpg"
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts"
 
 import data from "../../data.json"
 import Counter from "../Counter/Counter"
-import ProductDetailsInfoImages from "../ProductDetailsInfoImages/ProductDetailsInfoImages"
 
 const className = "ProductDetailsInfo"
 
@@ -23,6 +22,41 @@ const IncludedItems = () => {
 }
 
 const ProductDetailsInfo = () => {
+
+
+  // const [images] = useState({mobileImage: imageSourceMobile, tabletImage: imageSourceTablet, desktopImage: imageSourceDesktop})
+    
+  const [windowSize, setWindowSize] = useState()
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+  })
+
+  // const sourceDecider = () => {
+  //   if(windowSize <= 600) {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.mobile}`
+  //   } else if (windowSize <= 1400) {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.tablet}`
+  //   } else {
+  //     return process.env.PUBLIC_URL + `${data[0].gallery.first.desktop}`
+  //   }
+  // } //Neccessary to store the images or else resize redownloads images and takes too long
+
+  const sourceDecider = () => {
+    if(windowSize <= 600) {
+      return "mobile"
+    } else if (windowSize <= 1400) {
+      return "tablet"
+    } else {
+      return "desktop"
+    }
+  } 
+  console.log("data", process.env.PUBLIC_URL + `${data[0].gallery.first}.${sourceDecider()}`)
+
+  //Return ==> data [object Object].desktop
 
   return (
       <div className={`${className}Container`} >  
@@ -46,7 +80,13 @@ const ProductDetailsInfo = () => {
           <h2 className={`${className}BoxContentsHeading`}> IN THE BOX</h2>
           {IncludedItems()}
         </div>
-        <ProductDetailsInfoImages  />
+        <div>
+          {console.log("data123", `${process.env.PUBLIC_URL}${data[0].gallery.first[sourceDecider()]}`)}
+          
+            <img className={`${className}ImageGroup`} src={process.env.PUBLIC_URL + `${data[0].gallery.first}.${sourceDecider()}`} alt="product" />
+            <img className={`${className}ImageGroup`} src={`${process.env.PUBLIC_URL}${data[0].gallery.first[sourceDecider()]}`} alt="product" />
+            <img className={`${className}ImageGroup`} src={process.env.PUBLIC_URL + `${data[0].gallery.third.mobile}`} alt="product" />
+        </div> 
         <RecommendedProducts />
       </div>
   )
