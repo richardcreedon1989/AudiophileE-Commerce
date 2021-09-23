@@ -33,17 +33,19 @@ const ProductDetailsInfoImages = () => {
         <div className={`${className}ContainerLeft`}> 
             <img 
                 className={`${className}Group1`} 
-                src={process.env.PUBLIC_URL + data[0].gallery.first[sourceDecider()]} alt="product" 
+                src={data[0].gallery.first[sourceDecider()]} alt="product" 
             />
             <img 
                 className={`${className}Group2`} 
-                src={`${process.env.PUBLIC_URL}${data[0].gallery.second[sourceDecider()]}`} alt="product" 
+                // src={`${process.env.PUBLIC_URL}${data[0].gallery.second[sourceDecider()]}`} alt="product" 
+                src={data[0].gallery.second[sourceDecider()]} alt="product" 
+
             />
         </div>
         <div className={`${className}ContainerRight`}> 
             <img 
                 className={`${className}Group3`} 
-                src={process.env.PUBLIC_URL + data[0].gallery.third[sourceDecider()]} alt="product" 
+                src={data[0].gallery.third[sourceDecider()]} alt="product" 
             />
         </div>
     </figure>
