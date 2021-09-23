@@ -30,6 +30,7 @@ const ProductDetailsInfoImages = () => {
 //Change max width to 1200/1400px for container so stop stretch issues
   return (
     <figure className={`${className}Container`}>
+    TEst
         <div className={`${className}ContainerLeft`}> 
             <img 
                 className={`${className}Group1`} 
