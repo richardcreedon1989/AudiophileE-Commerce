@@ -15,7 +15,7 @@ const IncludedItems = () => {
     return (
         <div className={`${className}BoxContentsText`}> 
           <span div className={`${className}BoxContentsQuantity`}> 
-              {items.quantity}x
+              {items.quantity}
           </span> {items.item}  
         </div>
     )

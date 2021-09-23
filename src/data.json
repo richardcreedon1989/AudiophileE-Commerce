@@ -41,8 +41,8 @@
       }
     ],
     "gallery": {
-      "first": {
-        "mobile": "./assets/product-yx1-earphones/mobile/image-gallery-1.jpg",
+      "first": { 
+        "mobile": "../../assets/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg",
         "tablet": "./assets/product-yx1-earphones/tablet/image-gallery-1.jpg",
         "desktop": "./assets/product-yx1-earphones/desktop/image-gallery-1.jpg"
       },
