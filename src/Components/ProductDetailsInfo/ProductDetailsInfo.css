@@ -4,7 +4,7 @@
   flex-direction: column;
   margin-top: 50px;
   margin-bottom: 50px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@
 .ProductDetailsInfoNewProductHeading {
   letter-spacing: 4px;
   font-size: 10px;
-  margin-top: 20px;
+  margin-top: 50px;
   color: #D87D4A;
   text-align: left;
 }
@@ -59,6 +59,7 @@
   font-size: 24px;
   letter-spacing: .8px;
   line-height: 36px;
+  margin-top: 50px;
 }
 
 .ProductDetailsInfoFeaturesText {
@@ -71,11 +72,12 @@
 }
 
 .ProductDetailsInfoBoxContentsContainer {
-  margin-bottom: 80px;
-  margin-top: 60px;
+  margin-bottom: 50px;
+
 }
 
 .ProductDetailsInfoBoxContentsHeading{
+  margin-top: 40px;
   font-size: 24px;
   letter-spacing: .8px;
 }
@@ -89,72 +91,141 @@
   margin-top: 10px;
 }
 
-
-/* 
 @media screen and (min-width: 600px) {
   .ProductDetailsInfoContainer {
     margin-top: 100px;
     margin-bottom: 100px;
   }
 
+  .ProductDetailsInfoProductContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ProductDetailsInfoImage {
+    width:40%;
+    order: 1;
+    border-radius: 5px;
+    max-height: 500px;
+  }
+
   .ProductDetailsInfoTextContainer {
-    margin-top: 50px;
+    order: 2;
+    margin-top: 5%;
+    width: 60%;
+    margin-right: 0%;
+    margin-left: 8%;
+  }
+  
+  .ProductDetailsInfoNewProductHeading {
+    letter-spacing: 5px;
+    font-size: 10px; 
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  .ProductDetailsInfoProductHeading {
+    letter-spacing: 8px;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left:  0px;
+    margin-right:  0px;
+  }
+  
+  .ProductDetailsInfoParagraph {
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0px;
+    opacity: .6;
+    text-align: left;
+  }
+  
+  .ProductDetailsInfoButton {
+    margin-top: 10px;
+  }
+
+  .ProductDetailsInfoPrice {
+    margin-top: 10px;
+  }
+
+
+   /*
+
+  .ProductDetailsInfoBoxContentsContainer {
+    display: block;
+  } */
+
+  /* .ProductDetailsInfoFeaturesContainer  {
+    display: flex;
+    flex-direction: row;
+  }
+  .ProductDetailsInfoFeatures {
+    order: 1;
+    width: 50%;
+    font-size: 24px;
+    letter-spacing: .8px;
+    line-height: 36px;
+  }
+  
+  .ProductDetailsInfoFeaturesText {
+    order: 2;
+    width: 50%;
+    font-size: 15px;
+    color:#000000;
+    opacity: .5;
+    text-align: left;
+    line-height: 20px;
+    letter-spacing: 1px;
+  } */
+}
+
+@media screen and (min-width: 800px) {
+  .ProductDetailsInfoTextContainer {
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-right: 5%;
+
   }
   
   .ProductDetailsInfoNewProductHeading {
     letter-spacing: 5px;
     font-size: 15px; 
+    text-align: left;
   }
   
   .ProductDetailsInfoProductHeading {
     letter-spacing: 6px;
-    font-size: 40px;
-    margin-top: 0px;
-    margin-left: 20%;
-    margin-right: 20%;
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-right: 40%;
   }
   
   .ProductDetailsInfoParagraph {
-    letter-spacing: 3px;
-    font-size: 24px;
-    line-height: 30px;
-    margin: 20px 10% 50px 10%;
-    color:#000000;
-    opacity: .6;
-    text-align: center;
+    letter-spacing: 2.5px;
+    font-size: 15px;
+    line-height: 20px;
   }
-  
+
   .ProductDetailsInfoButton {
-    text-align: center;
+    margin-top: 20px;
+  }
+
+  .ProductDetailsInfoPrice {
+    margin-top: 40px;
   }
 }
 
 @media screen and (min-width: 1400px) { 
-  .ProductDetailsInfoContainer {
-  flex-direction: row;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin-top: 150px;
-}
 
-.ProductDetailsInfoImageContainer {
-  order: 1;
-  width: 50%;
-  height: auto;
-  border-radius: 10px;
-  justify-content: center;
-}
-
-.ProductDetailsInfoTextContainer {
-  margin-top: 10px;
-  order: 2;
-  width: 50%;
-  height: auto;
-  padding-left: 80px;
-
-}
-
-.ProductDet  ailsInfoNewProductHeading {
+  .ProductDetailsInfoTextContainer {
+    margin-top: 4%;
+    margin-left: 10%;
+  }
+/* 
+.ProductDetailsInfoNewProductHeading {
   letter-spacing: 4px;
   font-size: 10px;
   margin-top: 20px;
@@ -183,5 +254,5 @@
 .ProductDetailsInfoButton {
   text-align: left;
   margin-top: 50px;
-}
 } */
+}
