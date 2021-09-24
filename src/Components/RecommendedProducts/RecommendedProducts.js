@@ -13,12 +13,10 @@ const RecommendedProducts = ({data}) => {
         return (
           <div className={`${className}IndividualProductContainer`} > 
               <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${item.image.mobile}`} alt="other products" /> 
-              {console.log("rteasdasd", item.image.mobile)}
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 
                   <Button theme="orange" /> 
-              </div> 
-              
+              </div>         
           </div>
         )
     })
