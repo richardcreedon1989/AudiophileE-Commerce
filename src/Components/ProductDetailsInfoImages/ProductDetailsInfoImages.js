@@ -38,17 +38,17 @@ const ProductDetailsInfoImages = ({data}) => {
             <img 
                 className={`${className}Group1`} 
                 // src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.first[imageSizer()]}` : ""} alt="product" 
-                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.first.tablet}` : ""} alt="product" 
+                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.first.desktop}` : ""} alt="product" 
             /> 
             <img 
                 className={`${className}Group2`} 
-                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.second.tablet}` : ""} alt="product" 
+                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.second.desktop}` : ""} alt="product" 
             />
         </div>
         <div className={`${className}ContainerRight`}> 
             <img 
                 className={`${className}Group3`} 
-                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.third.tablet}` : ""} alt="product" 
+                src={data ? `${process.env.PUBLIC_URL}${data[0].gallery.third.desktop}` : ""} alt="product" 
             />
         </div>
     </figure>

@@ -52,30 +52,6 @@
     letter-spacing: 2px;
 }
 
-/* @media screen and (min-width: 300px) and (max-width: 400px) {
-    .items-container {
-        margin-top: -100px;     
-    } 
-}
-
-@media screen and (min-width: 401px) and (max-width: 440px) {
-    .items-container {
-        margin-top: -80px;     
-    } 
-}
-
-@media screen and (min-width: 490px) and (max-width: 550px) {
-    .items-container {
-        margin-top: -110px;     
-    } 
-} */
-
-/* @media screen and (min-width: 550px) {
-    .items-container {
-        margin-top: 0px;     
-    } 
-} */
-
 @media screen and (min-width: 600px) {
     .items-container {
         flex-direction: row;
@@ -87,7 +63,7 @@
     }
     .IndividualItemContainer:nth-child(2) {
       height: 200px;
-      margin: 100px 5% 0px 5%;
+      margin: 100px 10px 0px 10px;
       border-radius: 10px;
   }
     .IndividualItemImageEARPHONES {

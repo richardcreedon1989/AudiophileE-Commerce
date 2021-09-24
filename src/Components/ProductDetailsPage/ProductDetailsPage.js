@@ -25,14 +25,14 @@ const ProductDetailsPage = () => {
           <> 
             <Header color="black"/>
             <hr className="hrDesktop" />
-            <div className="container-padding"> 
-              <ProductDetailsInfo data={data}/>
-            </div>
-            <div className="container-padding"> 
+            <div className="desktop-width"> 
+            <div className="container-padding display-block"> 
+                <ProductDetailsInfo data={data}/>      
                 <div className="individual-item-container">
                     <IndividualItemList />
                 </div>
                 <ModelImage />
+            </div>
             </div>
             <Footer />
           </>

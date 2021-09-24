@@ -10,7 +10,7 @@ const RecommendedProducts = ({data}) => {
 
   const RecommendedProductsDisplay = () => {
     return data[0].others.map((item, index) => {
-      let image = item.image.mobile.slice(1)
+      let image = item.image.tablet.slice(1)
         return (
           <div className={`${className}IndividualProductContainer`} > 
               <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${image}`} alt="other products" /> 
@@ -26,7 +26,9 @@ const RecommendedProducts = ({data}) => {
   return (
       <div className={`${className}Container`}> 
           <h2 className={`${className}Heading`}> YOU MAY ALSO LIKE</h2>
-          {data ? RecommendedProductsDisplay() : ""}
+          <div className={`${className}FlexContainer`}> 
+              {data ? RecommendedProductsDisplay() : ""}
+          </div>
       </div>    
   )
 }
