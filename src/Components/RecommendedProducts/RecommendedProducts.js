@@ -10,9 +10,10 @@ const RecommendedProducts = ({data}) => {
 
   const RecommendedProductsDisplay = () => {
     return data[0].others.map((item, index) => {
+      let image = item.image.mobile.slice(1)
         return (
           <div className={`${className}IndividualProductContainer`} > 
-              <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${item.image.mobile}`} alt="other products" /> 
+              <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${image}`} alt="other products" /> 
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 
                   <Button theme="orange" /> 
