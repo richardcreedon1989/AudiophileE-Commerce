@@ -50,7 +50,10 @@ const ProductDetailsInfo = ({data}) => {
     
         <div className={`${className}BoxContentsContainer`}> 
           <h2 className={`${className}BoxContentsHeading`}> IN THE BOX</h2>
-          {data && IncludedItems()}
+          <div className={`${className}BoxContentsList`}> 
+              {data && IncludedItems()}
+          </div>
+          
         </div>
         <ProductDetailsInfoImages data={data} />
         <RecommendedProducts data={data}/>

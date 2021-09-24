@@ -149,13 +149,27 @@
   .ProductDetailsInfoPrice {
     margin-top: 10px;
   }
+  .ProductDetailsInfoBoxContentsContainer {
+    display: flex;
+  } 
 
+  .ProductDetailsInfoBoxContentsHeading {
+      order: 1;
+      width: 50%;
+  }
 
+  .ProductDetailsInfoBoxContentsList {
+      order: 2;
+      width: 50%;
+      margin-top: 40px;
+  }
+
+  .ProductDetailsInfoBoxContentsText:nth-of-type(1) {
+    margin-top: 0px;
+  }
    /*
 
-  .ProductDetailsInfoBoxContentsContainer {
-    display: block;
-  } */
+  */
 
   /* .ProductDetailsInfoFeaturesContainer  {
     display: flex;
