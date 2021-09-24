@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/audiophile-ecommerce/static/css/main.e447e9d2.chunk.css",
-    "main.js": "/audiophile-ecommerce/static/js/main.415ccde0.chunk.js",
-    "main.js.map": "/audiophile-ecommerce/static/js/main.415ccde0.chunk.js.map",
+    "main.css": "/audiophile-ecommerce/static/css/main.d042c7ef.chunk.css",
+    "main.js": "/audiophile-ecommerce/static/js/main.2e134c78.chunk.js",
+    "main.js.map": "/audiophile-ecommerce/static/js/main.2e134c78.chunk.js.map",
     "runtime-main.js": "/audiophile-ecommerce/static/js/runtime-main.ccde9e65.js",
     "runtime-main.js.map": "/audiophile-ecommerce/static/js/runtime-main.ccde9e65.js.map",
-    "static/js/2.6d64ac67.chunk.js": "/audiophile-ecommerce/static/js/2.6d64ac67.chunk.js",
-    "static/js/2.6d64ac67.chunk.js.map": "/audiophile-ecommerce/static/js/2.6d64ac67.chunk.js.map",
+    "static/js/2.7435c384.chunk.js": "/audiophile-ecommerce/static/js/2.7435c384.chunk.js",
+    "static/js/2.7435c384.chunk.js.map": "/audiophile-ecommerce/static/js/2.7435c384.chunk.js.map",
     "index.html": "/audiophile-ecommerce/index.html",
-    "static/css/main.e447e9d2.chunk.css.map": "/audiophile-ecommerce/static/css/main.e447e9d2.chunk.css.map",
-    "static/js/2.6d64ac67.chunk.js.LICENSE.txt": "/audiophile-ecommerce/static/js/2.6d64ac67.chunk.js.LICENSE.txt",
-    "static/media/category-image-product-xx99-mobile.f757980d.jpg": "/audiophile-ecommerce/static/media/category-image-product-xx99-mobile.f757980d.jpg",
+    "static/css/main.d042c7ef.chunk.css.map": "/audiophile-ecommerce/static/css/main.d042c7ef.chunk.css.map",
+    "static/js/2.7435c384.chunk.js.LICENSE.txt": "/audiophile-ecommerce/static/js/2.7435c384.chunk.js.LICENSE.txt",
     "static/media/earphone-preview.6e8830d4.png": "/audiophile-ecommerce/static/media/earphone-preview.6e8830d4.png",
     "static/media/headset-preview.fbd401d9.png": "/audiophile-ecommerce/static/media/headset-preview.fbd401d9.png",
     "static/media/icon-arrow-right.357b9db8.svg": "/audiophile-ecommerce/static/media/icon-arrow-right.357b9db8.svg",
@@ -42,8 +41,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ccde9e65.js",
-    "static/js/2.6d64ac67.chunk.js",
-    "static/css/main.e447e9d2.chunk.css",
-    "static/js/main.415ccde0.chunk.js"
+    "static/js/2.7435c384.chunk.js",
+    "static/css/main.d042c7ef.chunk.css",
+    "static/js/main.2e134c78.chunk.js"
   ]
 }
