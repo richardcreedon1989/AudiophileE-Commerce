@@ -3,26 +3,38 @@ import iconArrowRight from "../../../assets/icon-arrow-right.svg"
 import speakerPreview from "../../../assets/speaker-preview.png"
 import headsetPreview from "../../../assets/headset-preview.png"
 import earphonePreview from "../../../assets/earphone-preview.png"
+import {Link} from "react-router-dom"
 
 
 const className = "IndividualItem"
 
 const displayProducts = () => {
-    let arrayOfItems = [{name: "HEADPHONES", image: headsetPreview}, {name: "SPEAKERS", image: speakerPreview}, {name: "EARPHONES", image: earphonePreview} ]
+    let arrayOfItems = [{name: "Headphones", image: headsetPreview}, {name: "Speakers", image: speakerPreview}, {name: "Earphones", image: earphonePreview} ]
     return arrayOfItems.map((item) => {
         return(
             <div className={`${className}Container`} > 
-                <img className={`${className}Image${item.name}`} src={item.image} alt="select button" />
-                <h5 className={`${className}ProductText${item.name} individual-item-text`}> 
-                {item.name}
+                <img className={`${className}Image${item.name.toUpperCase()}`} src={item.image} alt="select button" />
+                <h5 className={`${className}ProductText${item.name.toUpperCase()} individual-item-text`}> 
+                {item.name.toUpperCase()}
                 </h5> 
-                <p className={`${className}Shop`}> SHOP <img className={`${className}ShopIcon`} src={iconArrowRight} alt="select button" /> </p>
+
+                <Link to={`/Category/:${item.name}`}> 
+                <p className={`${className}Shop`}> 
+                    SHOP 
+                    <img 
+                        className={`${className}ShopIcon`} 
+                        src={iconArrowRight} 
+                        alt="select button"   
+                    /> 
+                </p>
+                </Link> 
+
             </div> 
         )
     })
 }
 
-const IndividualItem = () => {
+const IndividualItem = (props) => {
     return(
         <div className="items-container"> 
             {displayProducts()}

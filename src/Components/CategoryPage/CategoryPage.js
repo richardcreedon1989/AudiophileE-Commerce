@@ -6,20 +6,20 @@ import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
 import "../../App.css"
 import CategoryProductList from "../CategoryProductList/CategoryProductList"
-
-const CategoryPage = () => {
-
+import {useParams} from "react-router-dom"
+const CategoryPage = ({data}) => {
+  const params = useParams()
   return (
       <div> 
-        <Header color="black"/>
-        <hr className="hrDesktop" />
-        <CategoryTitle category="HEADPHONES"/>  
-        <div className="container-padding"> 
-          <CategoryProductList category="HEADPHONES" newProduct="NEW PRODUCT"/>
-          <IndividualItemList />
-          <ModelImage />
-        </div>
-        <Footer />
+          <Header color="black"/>
+          <hr className="hrDesktop" />
+          <CategoryTitle category={params.Product}/>  
+          <div className="container-padding"> 
+            <CategoryProductList data={data} category={params.Product} newProduct="NEW PRODUCT"/>
+            <IndividualItemList />
+            <ModelImage />
+          </div>
+          <Footer />
       </div>
   )
 }

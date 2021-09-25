@@ -22,6 +22,7 @@ import SpeakerImage2 from "../../assets/image-category-page-preview-speaker2-mob
 
 import EarphonesImage1 from "../../assets/image-category-page-preview-earphones-mobile.jpg"
 
+
 const className = "CategoryProductList"
 
 const Products = [
@@ -75,16 +76,24 @@ const Earphones = [
     }
 
 ]
-const displayCategoryProducts = () => { 
-    return Products.map(({category, product, description,newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop}) => {
-      return <IndividualCategoryProduct category={category} product={product} imageSourceMobile={imageSourceMobile}
-            imageSourceTablet={imageSourceTablet} imageSourceDesktop={imageSourceDesktop} description={description} 
-            newProduct={newProduct}  
-            />
-  })
-}
+// const displayCategoryProducts = () => { 
+//     return Products.map(({category, product, description,newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop}) => {
+//       return <IndividualCategoryProduct category={category} product={product} imageSourceMobile={imageSourceMobile}
+//             imageSourceTablet={imageSourceTablet} imageSourceDesktop={imageSourceDesktop} description={description} 
+//             newProduct={newProduct}  
+//             />
+//   })
+// }
 
-const CategoryProductList = (props) => {
+
+
+const CategoryProductList = ({data}) => {
+
+  const displayCategoryProducts = () => { 
+    return Products.map((falseProps, index) => {
+      return <IndividualCategoryProduct data={data} index={index}/>
+    })
+  }
 
   return (
     <>
