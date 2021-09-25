@@ -15,7 +15,7 @@ const CategoryPage = ({data}) => {
           <hr className="hrDesktop" />
           <CategoryTitle category={params.Product}/>  
           <div className="container-padding"> 
-            <CategoryProductList data={data} category={params.Product} newProduct="NEW PRODUCT"/>
+            <CategoryProductList data={data} params={params.Product} category={params.Product} newProduct="NEW PRODUCT"/>
             <IndividualItemList />
             <ModelImage />
           </div>

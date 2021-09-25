@@ -10,15 +10,15 @@ const className = "IndividualItem"
 
 const displayProducts = () => {
     let arrayOfItems = [{name: "Headphones", image: headsetPreview}, {name: "Speakers", image: speakerPreview}, {name: "Earphones", image: earphonePreview} ]
-    return arrayOfItems.map((item) => {
+    return arrayOfItems.map((item, index) => {
         return(
-            <div className={`${className}Container`} > 
+            <div className={`${className}Container`} key={index} > 
                 <img className={`${className}Image${item.name.toUpperCase()}`} src={item.image} alt="select button" />
                 <h5 className={`${className}ProductText${item.name.toUpperCase()} individual-item-text`}> 
                 {item.name.toUpperCase()}
                 </h5> 
 
-                <Link to={`/Category/:${item.name}`}> 
+                <Link to={`/audiophile-ecommerce/Category/:${item.name}`}> 
                 <p className={`${className}Shop`}> 
                     SHOP 
                     <img 

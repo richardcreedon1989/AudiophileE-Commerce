@@ -5,16 +5,8 @@ import ProductSpecs from "../ProductSpecs/ProductSpecs"
 
 const className = "IndividualCategoryProduct"
 
-
-
-// const IndividualCategoryProduct = ({category, newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop, product, description}) => {
-  
-//   const [images] = useState({mobileImage: imageSourceMobile, tabletImage: imageSourceTablet, desktopImage: imageSourceDesktop})
-  
-
-
 const IndividualCategoryProduct = (props) => {
-    const {data, index} = props
+  const {data, index} = props
   const [windowSize, setWindowSize] = useState()
 
   useEffect(() => {
@@ -34,17 +26,7 @@ const IndividualCategoryProduct = (props) => {
   //   }
   // } //Neccessary to store the images or else resize redownloads images and takes too long
   
-  // const sourceDecider = () => {
-  //   if(windowSize <= 600) {
-  //     return images.mobileImage
-  //   } else if (windowSize <= 1400) {
-  //     return images.tabletImage
-  //   } else {
-  //     return images.desktopImage
-  //   }
-  // }
-
-  let image = data[index].image.tablet.slice(1)
+  let image = data ? data[index].image.tablet.slice(1) : ""
 
   return (
     <div className={`${className}Container`}>

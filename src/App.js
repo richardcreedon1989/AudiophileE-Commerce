@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react"
 import HomePage from './Components/Homepage/Homepage';
 import CategoryPage from './Components/CategoryPage/CategoryPage';
 import ProductDetailsPage from "./Components/ProductDetailsPage/ProductDetailsPage"
-import {Route, BrowserRouter as Router, Link} from "react-router-dom"
+import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 import axios from "axios"
 
 function App() {
@@ -21,11 +21,12 @@ function App() {
 
   return (
     <>
-        <Router > 
-            <Route path="/" exact component={HomePage} />
-            <Route path="/Category/:Product"  component={() => <CategoryPage data={data} />} />
-            <Route path="/ProductDetails"  component={ProductDetailsPage} />
-
+        <Router> 
+          <Switch> 
+              <Route path="/audiophile-ecommerce" exact component={HomePage} />
+              <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
+              <Route path="/audiophile-ecommerce/ProductDetails"  component={ProductDetailsPage} />
+          </Switch>
 
             {/* <HomePage /> */}
             {/* <CategoryPage /> */}

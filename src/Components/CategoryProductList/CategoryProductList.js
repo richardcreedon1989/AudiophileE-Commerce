@@ -21,83 +21,34 @@ import SpeakerImage1 from "../../assets/image-category-page-preview-speaker-mobi
 import SpeakerImage2 from "../../assets/image-category-page-preview-speaker2-mobile.jpg"
 
 import EarphonesImage1 from "../../assets/image-category-page-preview-earphones-mobile.jpg"
+import { useParams } from "react-router"
 
 
 const className = "CategoryProductList"
 
-const Products = [
 
-  { category: "HEADPHONES", product: "XX99 MARK II HEADPHONES",  imageSourceMobile: HeadPhonesImage1Mobile, 
-  imageSourceTablet: HeadPhonesImage1Tablet, imageSourceDesktop: HeadPhonesImage1Desktop,
-  newProduct: "" , description: `The new XX99 Mark II headphones is the pinnacle of pristine audio. 
-  It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.`
-  },
+const CategoryProductList = ({data, params}) => {
+//SHOULDNT BE MAPPING THROUGH PRODUCTS HERE, BUT DATA USING PARAMS TO CHECK WHAT CATEGORY IT IS AND RETURN THOSE CATEGORIES ONLY
+  // const displayCategoryProducts = () => { 
+  //   return Products.map((falseProps, index) => {
+  //     return 
+  //   })
+  // }
 
-  { category: "HEADPHONES", product: "XX99 MARK I HEADPHONES", imageSourceMobile: HeadPhonesImage2Mobile, 
-  imageSourceTablet: HeadPhonesImage2Tablet, imageSourceDesktop: HeadPhonesImage2Desktop,
-  newProduct: "" , description: `As the gold standard for headphones, the classic XX99 Mark I 
-  offers detailed and accurate audio reproduction for audiophiles, 
-  mixing engineers, and music aficionados alike in studios and on the go.`
-  },
-
-  { category: "HEADPHONES", product: "XX59 HEADPHONES", imageSourceMobile: HeadPhonesImage3Mobile, 
-  imageSourceTablet: HeadPhonesImage3Tablet, imageSourceDesktop: HeadPhonesImage3Desktop,
-  newProduct: "" , description: `Enjoy your audio almost anywhere and customize it to your specific 
-  tastes with the XX59 headphones. The stylish yet durable versatile 
-  wireless headset is a brilliant companion at home or on the move.`  
-  }
-
-]
-
-const Speakers = [
-
-    {
-      category: "SPEAKERS", product: "ZX9 SPEAKER", imageSource: SpeakerImage1, newProduct: "", 
-      description: `Upgrade your sound system with the all new ZX9 active speaker. 
-      It’s a bookshelf speaker system that offers truly wireless connectivity
-      -- creating new possibilities for more pleasing and practical audio setups.`,
-    }, 
-
-    {
-      category: "SPEAKERS", product: "ZX7 SPEAKER", imageSource: SpeakerImage2, newProduct: "", 
-      description: `Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf 
-      speaker uses high-end audiophile components that represents the top of the line powered 
-      speakers for home or studio use.`,
+  const displayCategoryProducts1 = () => {
+    return data.map((item, index) => {
+      console.log("items", item.category)
+    if(item.category === params.slice(1).toLowerCase()) {
+      return <IndividualCategoryProduct data={data} index={index} key={index}/>
     }
-
-]
-
-const Earphones = [
-  
-    {
-      category: "EARPHONES", product: "YX1 WIRELESS EARPHONES", imageSource: EarphonesImage1, newProduct: "", 
-      description: `Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
-      Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.`
-    }
-
-]
-// const displayCategoryProducts = () => { 
-//     return Products.map(({category, product, description,newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop}) => {
-//       return <IndividualCategoryProduct category={category} product={product} imageSourceMobile={imageSourceMobile}
-//             imageSourceTablet={imageSourceTablet} imageSourceDesktop={imageSourceDesktop} description={description} 
-//             newProduct={newProduct}  
-//             />
-//   })
-// }
-
-
-
-const CategoryProductList = ({data}) => {
-
-  const displayCategoryProducts = () => { 
-    return Products.map((falseProps, index) => {
-      return <IndividualCategoryProduct data={data} index={index}/>
-    })
-  }
+    // return console.log("item", item)
+  })
+}
 
   return (
     <>
-    {displayCategoryProducts()}
+    {/* {displayCategoryProducts()} */}
+    {data && displayCategoryProducts1()}
     </>
   )
 }
