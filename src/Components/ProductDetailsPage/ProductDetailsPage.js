@@ -4,30 +4,20 @@ import ProductDetailsInfo from "../ProductDetailsInfo/ProductDetailsInfo"
 import IndividualItemList from "../ShopItemList/IndividualItem/IndividualItem"
 import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
-import {useState, useEffect} from "react"
-import axios from "axios"
 import "../../App.css"
+import {useParams} from "react-router-dom"
 
-const ProductDetailsPage = () => {
+const ProductDetailsPage = ({data}) => {
 
-  const [data, setData] = useState()
-
-  const getData =  async() => {
-    let result = await axios.get(`${process.env.PUBLIC_URL}/data.json`)
-    setData(result.data)
-  }
-  
-  useEffect(()=>{
-    getData()
-  },[])
+  const params = useParams()
 
     return (
           <> 
             <Header color="black"/>
-            <hr className="hrDesktop" />
+            <hr className="hrDesktop"/>
             <div className="desktop-width"> 
-            <div className="container-padding display-block"> 
-                <ProductDetailsInfo data={data}/>      
+            <div className="container-padding container-padding-product-details display-block"> 
+                <ProductDetailsInfo params={params.id} data={data}/>      
                 <div className="individual-item-container">
                     <IndividualItemList />
                 </div>

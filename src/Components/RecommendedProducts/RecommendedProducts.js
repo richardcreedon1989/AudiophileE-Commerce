@@ -4,15 +4,14 @@ import Button from "../Button/Button"
 
 const className = "RecommendedProducts"
 
-const RecommendedProducts = ({data}) => {
-
-  console.log("data123341", data)
-
+const RecommendedProducts = ({data, params}) => {
+  
   const RecommendedProductsDisplay = () => {
-    return data[0].others.map((item, index) => {
+    console.log("thisparams", params)
+    return data[params].others.map((item, index) => {
       let image = item.image.tablet.slice(1)
         return (
-          <div className={`${className}IndividualProductContainer`} > 
+            <div key={index} className={`${className}IndividualProductContainer`} > 
               <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${image}`} alt="other products" /> 
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 

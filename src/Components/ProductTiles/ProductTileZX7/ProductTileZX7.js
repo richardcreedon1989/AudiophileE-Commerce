@@ -1,6 +1,6 @@
 import "./ProductTileZX7.css"
 import Button from "../../Button/Button"
-import backgroundImage from "../../../assets/image-speaker-zx7.jpg"
+import {Link} from "react-router-dom"
 const className = "ProductTilesZX7"
 
 const ProductTileZX7 = () => {
@@ -10,7 +10,9 @@ const ProductTileZX7 = () => {
                     <div className={`${className}ImageTextHeading`}> 
                         ZX7 SPEAKER 
                     </div>
-                    <Button theme="transparent" />                        
+                    <Link to="/audiophile-ecommerce/ProductDetails/:5"> 
+                        <Button theme="transparent" />                        
+                    </Link>
                   </div>
             </div>
               

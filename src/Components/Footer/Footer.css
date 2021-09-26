@@ -19,8 +19,9 @@
 
 .FooterListContainer {
   order: 2;
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
-  font-size: 10px;
   text-align: center;
   margin-top: 5%;
   font-size: 12px;
@@ -29,6 +30,15 @@
   letter-spacing: 4px;
   padding-left: 0;
 }
+
+.FooterListItem1,
+  .FooterListItem2, 
+  .FooterListItem3, 
+  .FooterListItem4 {
+      color: white;
+      list-style-type: none;
+      text-decoration: none;
+  }
 
 .FooterParagraph {
   order: 3;
@@ -80,8 +90,13 @@
       font-size: 15px;
   }
 
-  .FooterListContainer li{
-    margin-right: 20px;
+  .FooterListItem2, 
+  .FooterListItem3, 
+  .FooterListItem4 {
+      color: white;
+      list-style-type: none;
+      text-decoration: none;
+      margin-left: 20px;
   }
 
   .FooterParagraph {
@@ -118,7 +133,17 @@
   }
 
   .FooterListContainer {
-      font-size: 20px;
+      font-size: 15px;
+  }
+
+  .FooterListItem1,
+  .FooterListItem2, 
+  .FooterListItem3, 
+  .FooterListItem4 {
+      margin-right: 15px;
+      color: white;
+      list-style-type: none;
+      text-decoration: none;
   }
 
   .FooterParagraph {
@@ -172,8 +197,14 @@
       margin-top: 3%
   }
 
-  .FooterListContainer li{
+  .FooterListItem1,
+  .FooterListItem2, 
+  .FooterListItem3, 
+  .FooterListItem4 {
     margin-right: 20px;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
   }
 
   .FooterParagraph {

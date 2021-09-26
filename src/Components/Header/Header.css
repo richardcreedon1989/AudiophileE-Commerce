@@ -82,15 +82,17 @@
   }
 
   .desktop-menu-items {
-      list-style-type: none;
       justify-content: space-around;
       font-size: 1.2vw;
       letter-spacing: 3px;
       margin-right: 1.5vw;
       align-content: space-around;
       color: white;
+      text-decoration: none;
       font-weight: bolder;
   }
+
+
 
 }
   

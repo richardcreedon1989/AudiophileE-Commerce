@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.svg"
 import Facebook from "../../assets/icon-facebook.svg"
 import Twiiter from "../../assets/icon-twitter.svg"
 import Instagram from "../../assets/icon-instagram.svg"
+import {Link} from "react-router-dom"
 
 const className ="Footer"
 
@@ -12,12 +13,15 @@ const Footer = () => {
           <div className={`${className}LogoContainer`}> 
               <img className={`${className}Logo`} src={Logo} alt="logo" />
           </div> 
+
+
           <ul className={`${className}ListContainer`}> 
-            <li className={`${className}ListItem1`}> HOME </li>
-            <li className={`${className}ListItem2`}> HEADPHONES </li>
-            <li className={`${className}ListItem3`}> SPEAKERS</li>
-            <li className={`${className}ListItem4`}> EARPHONES </li>
+          <Link to="/audiophile-ecommerce/"  className={`${className}ListItem1`}> HOME </Link>
+          <Link to="/audiophile-ecommerce/Category/:Headphones" className={`${className}ListItem2`}> HEADPHONES </Link>
+          <Link to="/audiophile-ecommerce/Category/:Speakers" className={`${className}ListItem3`}> SPEAKERS</Link>
+          <Link to="/audiophile-ecommerce/Category/:Earphones" className={`${className}ListItem4`}> EARPHONES </Link>
           </ul>
+          
           <p className={`${className}Paragraph`}> 
           Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers 
           and sound specialists who are devoted to helping you get the most out of personal audio. 

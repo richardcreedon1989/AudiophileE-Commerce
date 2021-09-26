@@ -11,6 +11,7 @@ const CategoryPage = ({data}) => {
   const params = useParams()
   return (
       <div> 
+        {console.log("data1234", data)}
           <Header color="black"/>
           <hr className="hrDesktop" />
           <CategoryTitle category={params.Product}/>  

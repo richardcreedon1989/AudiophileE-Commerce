@@ -18,6 +18,13 @@
     text-align: center;
 }
 
+.IndividualItemShopLink {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;  
+  letter-spacing: 1.2px;
+}
+
 .IndividualItemImageEARPHONES {
     width: 140px;
     height: 140px;
@@ -139,9 +146,9 @@
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   .items-container {
-    /* margin-top: 150px; */
+    margin-top: 150px;
   }
   .IndividualItemContainer {
       height: 300px;

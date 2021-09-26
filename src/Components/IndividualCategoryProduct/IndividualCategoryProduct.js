@@ -1,7 +1,6 @@
 import "./IndividualCategoryProduct.css"
 import Button from "../../Components/Button/Button"
 import {useEffect, useState} from "react"
-import ProductSpecs from "../ProductSpecs/ProductSpecs"
 
 const className = "IndividualCategoryProduct"
 
@@ -26,7 +25,7 @@ const IndividualCategoryProduct = (props) => {
   //   }
   // } //Neccessary to store the images or else resize redownloads images and takes too long
   
-  let image = data ? data[index].image.tablet.slice(1) : ""
+  let image = data ? data[index].image.desktop.slice(1) : ""
 
   return (
     <div className={`${className}Container`}>

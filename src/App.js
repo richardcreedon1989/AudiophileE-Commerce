@@ -25,9 +25,10 @@ function App() {
           <Switch> 
               <Route path="/audiophile-ecommerce" exact component={HomePage} />
               <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
-              <Route path="/audiophile-ecommerce/ProductDetails"  component={ProductDetailsPage} />
+              {/* <Route path="/audiophile-ecommerce/ProductDetails/:id" component={() => <ProductDetailsPage data={data} />} /> */}
+              <Route path={`/audiophile-ecommerce/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
           </Switch>
-
+          {/* component={ProductDetailsPage} */}
             {/* <HomePage /> */}
             {/* <CategoryPage /> */}
             {/* <ProductDetailsPage /> */}
