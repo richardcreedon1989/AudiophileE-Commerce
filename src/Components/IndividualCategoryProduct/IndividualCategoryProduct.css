@@ -11,7 +11,7 @@
 
 .IndividualCategoryProductImageContainer {
   order: 1;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   justify-content: center;
@@ -63,6 +63,14 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
+  /* .IndividualCategoryProductImageContainer {
+    order: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    justify-content: center;
+  } */
 
   .IndividualCategoryProductTextContainer {
     margin-top: 50px;
@@ -136,9 +144,10 @@
 
 
 .IndividualCategoryProductNewProductHeading {
-  letter-spacing: 4px;
-  font-size: 10px;
+  letter-spacing: 5px;
+  font-size: 14px;
   margin-top: 20px;
+  text-align: left;
 }
 
 .IndividualCategoryProductProductHeading {

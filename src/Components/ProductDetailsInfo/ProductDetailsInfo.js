@@ -1,3 +1,4 @@
+import {useEffect, useState} from "react"
 import "./ProductDetailsInfo.css"
 import RecommendedProducts from "../RecommendedProducts/RecommendedProducts"
 import Counter from "../Counter/Counter"
@@ -7,9 +8,27 @@ const className = "ProductDetailsInfo"
 
 const ProductDetailsInfo = ({data, params}) => {
 
+  const [windowSize, setWindowSize] = useState()
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+  })
+
+  const imageSizer = () => {
+    if(windowSize <= 600) {
+      return "mobile"
+    } else if (windowSize <= 1400) {
+      return "tablet"
+    } else {
+      return "desktop"
+    }
+  } 
+
   console.log("dataasdasd", params)
   params = params.slice(1) - 1
-  // console.log("dataasdasd", data[params])
 
   const IncludedItems = () => {
     return data[params].includes.map((items, index) => {
@@ -23,12 +42,10 @@ const ProductDetailsInfo = ({data, params}) => {
     })
   }
 
-  let image = data && params ? `${process.env.PUBLIC_URL}${data[params].image.mobile.slice(1)}` : ""
-  console.log("image", image)
   return (
       <div className={`${className}Container`} >  
         <div className={`${className}ProductContainer`}> 
-            <img className={`${className}Image`} src={image} alt="product" />
+            <img className={`${className}Image`} src={data ? `${process.env.PUBLIC_URL}${data[params].image[imageSizer()].slice(1)}` : ""} alt="product" />
             <div className={`${className}TextContainer`}> 
                 <h2 className={`${className}NewProductHeading`}> 
                     {data &&  data[params].new === true ? "New Product" : ""} 

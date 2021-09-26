@@ -88,16 +88,22 @@ body {
 
 @media screen and (min-width: 1000px){ 
     .imageContainer {
-      height: 1200px;
-    }}
+      height: 1100px;
+    }
+    .hrDesktop {
+      display: block;
+      margin: 0 0vw 0 0vw;
+      height: 1px;
+      background-color: grey;
+      border: none;
+  }
+  }
 @media screen and (min-width: 1200px){ 
   .imageContainer {
     background-position:center top;
-    height: 1400px;
+    height: 1200px;
   }
-  .hrDesktop {
-    display:  none;
-  }
+  
 }
 
 @media screen and (min-width: 1400px){ 
@@ -110,13 +116,6 @@ body {
   .container-padding {
       padding-left: 10%;
       padding-right: 10%;
-  }
-  .hrDesktop {
-      display: block;
-      margin: 0 0vw 0 0vw;
-      height: 1px;
-      background-color: grey;
-      border: none;
   }
 }
 

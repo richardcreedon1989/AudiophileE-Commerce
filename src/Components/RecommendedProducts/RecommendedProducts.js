@@ -1,18 +1,35 @@
 import "./RecommendedProducts.css"
 import Button from "../Button/Button"
+import {useState, useEffect} from "react"
 // import data from "../../data.json"
 
 const className = "RecommendedProducts"
 
 const RecommendedProducts = ({data, params}) => {
-  
+
+  const [windowSize, setWindowSize] = useState()
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+  })
+
+  const imageSizer = () => {
+    if(windowSize <= 600) {
+      return "mobile"
+    } else if (windowSize <= 1400) {
+      return "tablet"
+    } else {
+      return "desktop"
+    }
+  } 
   const RecommendedProductsDisplay = () => {
-    console.log("thisparams", params)
     return data[params].others.map((item, index) => {
-      let image = item.image.tablet.slice(1)
         return (
             <div key={index} className={`${className}IndividualProductContainer`} > 
-              <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${image}`} alt="other products" /> 
+              <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${item.image[imageSizer()].slice(1)}`} alt="other products" /> 
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 
                   <Button theme="orange" /> 

@@ -48,7 +48,7 @@
 
 }
   
-@media screen and (min-width: 1400px){ 
+@media screen and (min-width: 1000px){ 
   .header {
       height: 180px; 
       justify-content: none;

@@ -1,6 +1,7 @@
 import "./IndividualCategoryProduct.css"
 import Button from "../../Components/Button/Button"
 import {useEffect, useState} from "react"
+import {Link} from "react-router-dom"
 
 const className = "IndividualCategoryProduct"
 
@@ -15,22 +16,20 @@ const IndividualCategoryProduct = (props) => {
     window.addEventListener('resize', handleResize)
   })
 
-  // const sourceDecider = () => {
-  //   if(windowSize <= 600) {
-  //     return images.mobileImage
-  //   } else if (windowSize <= 1400) {
-  //     return images.tabletImage
-  //   } else {
-  //     return images.desktopImage
-  //   }
-  // } //Neccessary to store the images or else resize redownloads images and takes too long
-  
-  let image = data ? data[index].image.desktop.slice(1) : ""
+  const imageSizer = () => {
+    if(windowSize <= 600) {
+      return "mobile"
+    } else if (windowSize <= 1400) {
+      return "tablet"
+    } else {
+      return "desktop"
+    }
+  } 
 
   return (
     <div className={`${className}Container`}>
-      {console.log("dataHere", props.index)}
-        <img className={`${className}ImageContainer`} src={data ? `${process.env.PUBLIC_URL}${image}` : ""}  alt={data ? data[index].category : ""} />
+      {console.log("dataHere", data[index])}
+        <img className={`${className}ImageContainer`} src={data ? `${process.env.PUBLIC_URL}${data[index].categoryImage[imageSizer()].slice(1)}` : ""}  alt={data ? data[index].category : ""} />
         <div className={`${className}TextContainer`}> 
             <h2 className={`${className}NewProductHeading`}> 
                 {data && data[index].new ? "New Product" : ""} 
@@ -42,7 +41,9 @@ const IndividualCategoryProduct = (props) => {
                 {data ? data[index].description : ""}
             </p>
             <div className={`${className}Button`}>
-                <Button theme="orange"/>
+                <Link to={`/audiophile-ecommerce/ProductDetails/:${data[index].id}`}> 
+                    <Button theme="orange"/>
+                </Link>
             </div> 
         </div>
       </div>
@@ -50,48 +51,3 @@ const IndividualCategoryProduct = (props) => {
 }
 
 export default IndividualCategoryProduct
-// const IndividualCategoryProduct = ({category, newProduct, imageSourceMobile, imageSourceTablet, imageSourceDesktop, product, description}) => {
-  
-//   const [images] = useState({mobileImage: imageSourceMobile, tabletImage: imageSourceTablet, desktopImage: imageSourceDesktop})
-  
-//   const [windowSize, setWindowSize] = useState()
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setWindowSize(window.innerWidth)
-//     }
-//     window.addEventListener('resize', handleResize)
-//   })
-
-//   const sourceDecider = () => {
-//     if(windowSize <= 600) {
-//       return images.mobileImage
-//     } else if (windowSize <= 1400) {
-//       return images.tabletImage
-//     } else {
-//       return images.desktopImage
-//     }
-//   } //Neccessary to store the images or else resize redownloads images and takes too long
-  
-//   return (
-//     <div className={`${className}Container`}>
-//         <img className={`${className}ImageContainer`} src={sourceDecider()} alt={category} />
-//         <div className={`${className}TextContainer`}> 
-//             <h2 className={`${className}NewProductHeading`}> 
-//                 {newProduct} 
-//             </h2>
-//             <h2 className={`${className}ProductHeading`}>
-//                 {product}
-//             </h2>
-//             <p className={`${className}Paragraph`}> 
-//                 {description}
-//             </p>
-//             <div className={`${className}Button`}>
-//                 <Button theme="orange"/>
-//             </div> 
-//         </div>
-//       </div>
-//   )
-// }
-
-// export default IndividualCategoryProduct
