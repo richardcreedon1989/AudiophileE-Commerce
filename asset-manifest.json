@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/audiophile-ecommerce/static/css/main.112373ab.chunk.css",
-    "main.js": "/audiophile-ecommerce/static/js/main.923ab611.chunk.js",
-    "main.js.map": "/audiophile-ecommerce/static/js/main.923ab611.chunk.js.map",
+    "main.css": "/audiophile-ecommerce/static/css/main.a418bdb6.chunk.css",
+    "main.js": "/audiophile-ecommerce/static/js/main.92a5ab9f.chunk.js",
+    "main.js.map": "/audiophile-ecommerce/static/js/main.92a5ab9f.chunk.js.map",
     "runtime-main.js": "/audiophile-ecommerce/static/js/runtime-main.ccde9e65.js",
     "runtime-main.js.map": "/audiophile-ecommerce/static/js/runtime-main.ccde9e65.js.map",
-    "static/js/2.2c7016ac.chunk.js": "/audiophile-ecommerce/static/js/2.2c7016ac.chunk.js",
-    "static/js/2.2c7016ac.chunk.js.map": "/audiophile-ecommerce/static/js/2.2c7016ac.chunk.js.map",
+    "static/js/2.834ff4bd.chunk.js": "/audiophile-ecommerce/static/js/2.834ff4bd.chunk.js",
+    "static/js/2.834ff4bd.chunk.js.map": "/audiophile-ecommerce/static/js/2.834ff4bd.chunk.js.map",
     "index.html": "/audiophile-ecommerce/index.html",
-    "static/css/main.112373ab.chunk.css.map": "/audiophile-ecommerce/static/css/main.112373ab.chunk.css.map",
-    "static/js/2.2c7016ac.chunk.js.LICENSE.txt": "/audiophile-ecommerce/static/js/2.2c7016ac.chunk.js.LICENSE.txt",
+    "static/css/main.a418bdb6.chunk.css.map": "/audiophile-ecommerce/static/css/main.a418bdb6.chunk.css.map",
+    "static/js/2.834ff4bd.chunk.js.LICENSE.txt": "/audiophile-ecommerce/static/js/2.834ff4bd.chunk.js.LICENSE.txt",
     "static/media/earphone-preview.6e8830d4.png": "/audiophile-ecommerce/static/media/earphone-preview.6e8830d4.png",
     "static/media/headset-preview.fbd401d9.png": "/audiophile-ecommerce/static/media/headset-preview.fbd401d9.png",
     "static/media/icon-arrow-right.357b9db8.svg": "/audiophile-ecommerce/static/media/icon-arrow-right.357b9db8.svg",
@@ -28,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ccde9e65.js",
-    "static/js/2.2c7016ac.chunk.js",
-    "static/css/main.112373ab.chunk.css",
-    "static/js/main.923ab611.chunk.js"
+    "static/js/2.834ff4bd.chunk.js",
+    "static/css/main.a418bdb6.chunk.css",
+    "static/js/main.92a5ab9f.chunk.js"
   ]
 }
