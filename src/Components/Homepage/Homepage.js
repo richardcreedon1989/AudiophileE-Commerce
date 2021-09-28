@@ -9,8 +9,10 @@ import Footer from "../Footer/Footer"
 
 const HomePage = () => {
 
+  let currentWindowWidth = window.innerWidth
+
   const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
-  const [windowSize, setWindowSize] = useState()
+  const [windowSize, setWindowSize] = useState(currentWindowWidth)
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,7 +23,8 @@ const HomePage = () => {
   },[windowSize])
 
   const displayMenu = () => {
-    return windowSize <= 1000 ? setIsMenuDisplayed(!isMenuDisplayed) : ""
+    console.log("here", windowSize)
+    windowSize < 1000 && setIsMenuDisplayed(!isMenuDisplayed) 
   }
 
   return (

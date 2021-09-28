@@ -42,7 +42,7 @@ body {
 .Menu-Displayed-Background {
   background-color: #F1F1F1;
   opacity: .5;
-  height: 3300px;
+  /* height: 3300px; */
 }
 
 .Menu-Displayed-Background-Footer {
