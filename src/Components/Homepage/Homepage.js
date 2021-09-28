@@ -1,5 +1,5 @@
 import '../../App.css';
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Header from "../Header/Header"
 import NewProductDisplay from "../NewProductDisplay/NewProductDisplay"
 import IndividualItemList from "../ShopItemList/IndividualItem/IndividualItem"
@@ -8,22 +8,45 @@ import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
 
 const HomePage = () => {
+
+  const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
+  const [windowSize, setWindowSize] = useState()
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return windowSize > 1000 ? setIsMenuDisplayed(false) : ""
+  },[windowSize])
+
+  const displayMenu = () => {
+    return windowSize <= 1000 ? setIsMenuDisplayed(!isMenuDisplayed) : ""
+  }
+
   return (
-      <>
+      <div>
         <div className="imageWrapper">
           <div className="imageContainer">
-            <Header color="transparent" />
-            <hr className="hrDesktop" />
-            <NewProductDisplay />
+            <Header displayMenu={displayMenu} color="transparent" />
+            <div className="menu-display" style={{display: isMenuDisplayed ? "" : "none"}}> 
+                <IndividualItemList />
+            </div>
+            <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
+                <hr className="hrDesktop" />
+                <NewProductDisplay />
+            </div>
           </div>
         </div>
-        <div className="container-padding"> 
+        <div className={isMenuDisplayed ? "container-padding Menu-Displayed-Background" : "container-padding"}> 
             <IndividualItemList />
             <ProductTilesContainer />
             <ModelImage />
         </div>
-        <Footer />
-    </>
+        <div className={isMenuDisplayed ? "Menu-Displayed-Background-Footer" : ""}> 
+            <Footer/>
+        </div>
+    </div>
   )
 }
 

@@ -238,35 +238,36 @@
     margin-top: 4%;
     margin-left: 10%;
   }
-/* 
-.ProductDetailsInfoNewProductHeading {
-  letter-spacing: 4px;
-  font-size: 10px;
-  margin-top: 20px;
-}
 
-.ProductDetailsInfoProductHeading {
-  letter-spacing: 4px;
-  line-height: 60px;
-  font-size: 50px;
-  margin-top: 20px;
-  margin-right: 20px;
-  text-align: left;
-  margin-left: 0px;
-}
+  .ProductDetailsInfoFlexContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .ProductDetailsInfoFeaturesContainer {
+      order: 1;
+      width: 60%;
+  }
 
-.ProductDetailsInfoParagraph {
-  letter-spacing: 2px;
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0px 20px 20px 0px;
-  color:#000000;
-  opacity: .6;
-  text-align: left;
-}
+  .ProductDetailsInfoBoxContentsContainer{
+      order: 2;  
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+  }
 
-.ProductDetailsInfoButton {
-  text-align: left;
-  margin-top: 50px;
-} */
+  .ProductDetailsInfoBoxContentsHeading {
+      order: 1;
+      width: auto;
+      margin: auto;
+      margin-top: 50px;
+      margin-left: 26%;
+  }
+  .ProductDetailsInfoBoxContentsList {
+    order: 2;
+    width: auto;
+    margin: auto; 
+    margin-left: 26%;
+  }
 }

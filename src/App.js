@@ -5,6 +5,7 @@ import CategoryPage from './Components/CategoryPage/CategoryPage';
 import ProductDetailsPage from "./Components/ProductDetailsPage/ProductDetailsPage"
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 import axios from "axios"
+import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 
 function App() {
 
@@ -25,13 +26,9 @@ function App() {
           <Switch> 
               <Route path="/audiophile-ecommerce" exact component={HomePage} />
               <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
-              {/* <Route path="/audiophile-ecommerce/ProductDetails/:id" component={() => <ProductDetailsPage data={data} />} /> */}
               <Route path={`/audiophile-ecommerce/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
+              <Route path={`/audiophile-ecommerce/CheckoutPage`}  component={() => <CheckoutPage data={data} />}/>
           </Switch>
-          {/* component={ProductDetailsPage} */}
-            {/* <HomePage /> */}
-            {/* <CategoryPage /> */}
-            {/* <ProductDetailsPage /> */}
         </Router>
     </>
   );

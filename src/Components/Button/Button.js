@@ -1,6 +1,6 @@
 import "./Button.css"
 
-const Button = ({theme}) => {
+const Button = ({theme, text}) => {
     
     const themeSelector = () => {
         if(theme && theme === "orange") {
@@ -14,7 +14,7 @@ const Button = ({theme}) => {
 
     return(
         <button className={`${themeSelector()}`}> 
-            SEE PRODUCT
+            {text ? text : "SEE PRODUCT"}
         </button> 
     )
 }

@@ -1,7 +1,7 @@
 import "./RecommendedProducts.css"
 import Button from "../Button/Button"
 import {useState, useEffect} from "react"
-// import data from "../../data.json"
+import {Link} from "react-router-dom"
 
 const className = "RecommendedProducts"
 
@@ -25,14 +25,33 @@ const RecommendedProducts = ({data, params}) => {
       return "desktop"
     }
   } 
+
+  // const goToRecommendedProduct = () => {
+
+  // }
+
   const RecommendedProductsDisplay = () => {
     return data[params].others.map((item, index) => {
+      
+      const goToRecommendedProduct = () => {
+        data.find((subItem, index) => {
+          console.log("subs123", subItem.slug)
+            if(subItem.slug === item.slug) {
+              return item.slug
+            } 
+          })
+      }
+
+      console.log("goTo123", goToRecommendedProduct())
         return (
             <div key={index} className={`${className}IndividualProductContainer`} > 
+            {console.log("dataNewest", data[params].others)}  
               <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${item.image[imageSizer()].slice(1)}`} alt="other products" /> 
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 
-                  <Button theme="orange" /> 
+                  <Link to={`/audiophile-ecommerce/ProductDetails/:${goToRecommendedProduct()}`}> 
+                      <Button theme="orange" /> 
+                  </Link>
               </div>         
           </div>
         )

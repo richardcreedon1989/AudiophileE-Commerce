@@ -10,6 +10,7 @@ const ProductDetailsInfo = ({data, params}) => {
 
   const [windowSize, setWindowSize] = useState()
 
+
   useEffect(() => {
     const handleResize = () => {
       setWindowSize(window.innerWidth)
@@ -62,17 +63,17 @@ const ProductDetailsInfo = ({data, params}) => {
                 </div>
             </div>
         </div>
-        <div className={`${className}FeaturesContainer`}> 
-            <h2 className={`${className}Features`}> FEATURES  </h2>
-            <section className={`${className}FeaturesText`}> {data && data[params].features} </section>
-        </div>
-    
-        <div className={`${className}BoxContentsContainer`}> 
-          <h2 className={`${className}BoxContentsHeading`}> IN THE BOX</h2>
-          <div className={`${className}BoxContentsList`}> 
-              {data && IncludedItems()}
-          </div>
-          
+        <div className={`${className}FlexContainer`}> 
+            <div className={`${className}FeaturesContainer`}> 
+                <h2 className={`${className}Features`}> FEATURES  </h2>
+                <section className={`${className}FeaturesText`}> {data && data[params].features} </section>
+            </div>
+            <div className={`${className}BoxContentsContainer`}>       
+                  <h2 className={`${className}BoxContentsHeading`}> IN THE BOX</h2>
+                  <div className={`${className}BoxContentsList`}> 
+                      {data && IncludedItems()}
+                  </div>
+            </div>
         </div>
         <ProductDetailsInfoImages params={params} data={data} />
         <RecommendedProducts params={params} data={data}/>
