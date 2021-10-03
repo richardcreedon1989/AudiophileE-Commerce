@@ -14,6 +14,10 @@ const Header = (props) => {
     const displayMenu = () => {
         props.displayMenu()
     }
+
+    const displayCartSummary = () => {
+        props.displayCartSummary()
+    }
     return (
         <nav className={`${headerBackground()} header`}> 
             <ul className="desktop-header">
@@ -22,10 +26,12 @@ const Header = (props) => {
                 <Link to="/audiophile-ecommerce/Category/:Speakers" className="desktop-menu-items"> SPEAKERS </Link>
                 <Link to="/audiophile-ecommerce/Category/:Earphones" className="desktop-menu-items"> EARPHONES</Link>
             </ul>
-            <div onClick={() => displayMenu()}>
-                <img className="iconBurger" src={iconBurger} alt="menu"/>
+            <div className="iconBurger" onClick={() => displayMenu()}>
+                <img  src={iconBurger} alt="menu"/>
             </div>
-            <img className="iconCart" src={iconCart} alt="cart"/>
+            <div onClick={() => displayCartSummary()} className="iconCart"> 
+                <img  src={iconCart} alt="cart"/>
+            </div>
             <img className="iconLogo" src={iconLogo} alt="logo"/>
         </nav>  
     )

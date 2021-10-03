@@ -1,14 +1,12 @@
 import "./Counter.css"
 import Button from "../Button/Button"
 import { useState } from "react"
+import { useCartUpdate} from "../Contexts/CartContext"
 
 const Counter = (props) => {
   const [count, setCount] = useState(0)
-  const [basket, setBasket] = useState(0)
 
-  const addToBasket = () => {
-    props.addToBasket()
-  }
+  const updateCart = useCartUpdate()
 
   return (
     <div className="CounterButton">
@@ -20,12 +18,11 @@ const Counter = (props) => {
         </div>
       </div>
       <div onClick={() => {
-        setBasket(count)
+        updateCart({quantity: count, id: props.params})
         setCount(0)
         }}>
         <Button  text={"ADD TO CART"} />
       </div>
-      {basket}
     </div>
   )
 }

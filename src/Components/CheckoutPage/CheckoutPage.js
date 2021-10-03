@@ -1,21 +1,21 @@
 import "./CheckoutPage.css"
 import {Formik, Form, useField, Field } from "formik"
 import * as Yup from 'yup';
+import SummaryPage from "../SummaryPage/SummaryPage";
 
 const className = "CheckoutPage"
 
 let initialValues = {
-  name: "",
-  emailAddress: "",
-  middleName: "",
-  yourAddress: "",
-  zipCode: "",
-  city: "",
-  country: "",
-  paymentMethod: "",
-  eMoney: "",
-  eMoneyPin: "",
-
+    name: "",
+    emailAddress: "",
+    middleName: "",
+    yourAddress: "",
+    zipCode: "",
+    city: "",
+    country: "",
+    paymentMethod: "",
+    eMoney: "",
+    eMoneyPin: "",
 }
 
 const validationSchema= Yup.object({
@@ -55,7 +55,7 @@ const MyTextInput = ({ label, ...props }) => {
   );
 };
 
-const CheckoutPage = () => {
+const CheckoutPage = ({data}) => {
   return (
     <Formik
       initialValues={initialValues}
@@ -170,12 +170,13 @@ const CheckoutPage = () => {
             placeholder="5674"
         />
 
+ 
 
             {console.log("values", values)}
             {console.log("errors", errors)}
         </div>
         </div>
-
+        <SummaryPage data={data} />
     </Form>
       )}  
                     

@@ -6,12 +6,14 @@ import IndividualItemList from "../ShopItemList/IndividualItem/IndividualItem"
 import ProductTilesContainer from "../ProductTiles/ProductTilesContainer/ProductTilesContainer"
 import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
+import CartIconSummary from "../../Components/CartIconSummary/CartIconSummary"
 
-const HomePage = () => {
+const HomePage = ({data}) => {
 
   let currentWindowWidth = window.innerWidth
 
   const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
+  const [isCartSummaryDisplayed, setIsCartSummaryDisplayed] = useState(false)
   const [windowSize, setWindowSize] = useState(currentWindowWidth)
 
   useEffect(() => {
@@ -23,19 +25,25 @@ const HomePage = () => {
   },[windowSize])
 
   const displayMenu = () => {
-    console.log("here", windowSize)
     windowSize < 1000 && setIsMenuDisplayed(!isMenuDisplayed) 
+  }
+
+  const displayCartSummary = () => {
+    setIsCartSummaryDisplayed(!isCartSummaryDisplayed)
   }
 
   return (
       <div>
         <div className="imageWrapper">
           <div className="imageContainer">
-            <Header displayMenu={displayMenu} color="transparent" />
+            <Header displayCartSummary={displayCartSummary} displayMenu={displayMenu} color="transparent" />
             <div className="menu-display" style={{display: isMenuDisplayed ? "" : "none"}}> 
                 <IndividualItemList />
             </div>
-            <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
+            <div className="cart-display" style={{display: isCartSummaryDisplayed ? "" : "none"}}> 
+                <CartIconSummary data={data}/>
+            </div>
+            <div className={isMenuDisplayed  ? "Menu-Displayed-Background" : ""}> 
                 <hr className="hrDesktop" />
                 <NewProductDisplay />
             </div>

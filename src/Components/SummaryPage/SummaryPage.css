@@ -1,0 +1,101 @@
+
+.SummaryPageOuterContainer {
+  background-color: #F1F1F1;
+  padding: 2% 0 2% 0;
+}
+
+.SummaryPageContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 5% 5% 5%;
+  padding-bottom: 5%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.SummaryPageHeading {
+  margin-left: 10%;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+}
+
+.SummaryPageCartItemContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 10% 0 10%;
+}
+
+.SummaryPageImageContainer {
+    order: 1;
+  
+}
+
+.SummaryPageImage {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+.SummaryPageCartItemNamePriceContainer {
+    order: 2;
+    /* width:65%; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.SummaryPageCartItemName {
+    font-size: 12px;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.SummaryPageCartItemPrice {
+  font-size: 12px;
+  opacity: .5;
+}
+
+.SummaryPageCartItemQuantity {
+    display: inline-block;
+    order: 3;
+    margin-top: 10px;
+    text-align: right;
+    flex: 1;
+    font-size: 12px;
+    opacity: .7;
+    /* width: 15%; */
+}
+
+.SummaryPageTextContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10% 0 10%;
+    font-size: 10px;
+    opacity: .5;
+}
+
+.SummaryPageTextContainer:nth-of-type(5) {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 10% 0 10%;
+}
+
+.SummaryPageTextContainer:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 10% 0 10%;
+}
+
+.SummaryPageText {
+    order: 1;
+    width: 85%;
+}
+
+.SummaryPageAmount {
+    order: 2;
+    width: 15%;
+    text-align: right;
+}
+
+

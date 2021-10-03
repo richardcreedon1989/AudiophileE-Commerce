@@ -11,6 +11,7 @@ const ProductDetailsInfo = ({data, params}) => {
   const [windowSize, setWindowSize] = useState()
 
 
+
   useEffect(() => {
     const handleResize = () => {
       setWindowSize(window.innerWidth)
@@ -28,7 +29,6 @@ const ProductDetailsInfo = ({data, params}) => {
     }
   } 
 
-  console.log("dataasdasd", params)
   params = params.slice(1) - 1
 
   const IncludedItems = () => {
@@ -59,7 +59,7 @@ const ProductDetailsInfo = ({data, params}) => {
                 </p>
                 <h2 className={`${className}Price`}> $ {data && data[params].price} </h2>
                 <div className={`${className}Button`}> 
-                <Counter />
+                <Counter params={params} />
                 </div>
             </div>
         </div>

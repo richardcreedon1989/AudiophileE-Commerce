@@ -6,6 +6,8 @@ import ProductDetailsPage from "./Components/ProductDetailsPage/ProductDetailsPa
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 import axios from "axios"
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
+import {CartProvider} from "./Components/Contexts/CartContext"
+
 
 function App() {
 
@@ -19,17 +21,21 @@ function App() {
   useEffect(()=>{
     getData()
   },[])
+  
 
   return (
     <>
+    <CartProvider> 
         <Router> 
-          <Switch> 
-              <Route path="/audiophile-ecommerce" exact component={HomePage} />
-              <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
-              <Route path={`/audiophile-ecommerce/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
-              <Route path={`/audiophile-ecommerce/CheckoutPage`}  component={() => <CheckoutPage data={data} />}/>
-          </Switch>
+            <Switch> 
+                <Route path="/audiophile-ecommerce" exact component={() => <HomePage data={data} />} />
+                <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
+                <Route path={`/audiophile-ecommerce/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
+                <Route path={`/audiophile-ecommerce/CheckoutPage`}  component={() => <CheckoutPage data={data} />}/>
+            </Switch>
         </Router>
+    </CartProvider>
+      
     </>
   );
 }
