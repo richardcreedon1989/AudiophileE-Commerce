@@ -7,6 +7,7 @@ import ProductTilesContainer from "../ProductTiles/ProductTilesContainer/Product
 import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
 import CartIconSummary from "../../Components/CartIconSummary/CartIconSummary"
+import {useCart} from "../Contexts/CartContext"
 
 const HomePage = ({data}) => {
 
@@ -15,6 +16,7 @@ const HomePage = ({data}) => {
   const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
   const [isCartSummaryDisplayed, setIsCartSummaryDisplayed] = useState(false)
   const [windowSize, setWindowSize] = useState(currentWindowWidth)
+  const cart = useCart()
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,13 +26,18 @@ const HomePage = ({data}) => {
     return windowSize > 1000 ? setIsMenuDisplayed(false) : ""
   },[windowSize])
 
+  // useEffect (() => {
+  //     return cart.length === 0 ? setIsCartSummaryDisplayed(false) : ""
+  // }, [cart])
+
   const displayMenu = () => {
     windowSize < 1000 && setIsMenuDisplayed(!isMenuDisplayed) 
   }
 
-  const displayCartSummary = () => {
+  const displayCartSummary = () => {    
     setIsCartSummaryDisplayed(!isCartSummaryDisplayed)
   }
+
 
   return (
       <div>

@@ -28,7 +28,6 @@ const IndividualCategoryProduct = (props) => {
 
   return (
     <div className={`${className}Container`}>
-      {console.log("dataHere", data[index])}
         <img className={`${className}ImageContainer`} src={data ? `${process.env.PUBLIC_URL}${data[index].categoryImage[imageSizer()].slice(1)}` : ""}  alt={data ? data[index].category : ""} />
         <div className={`${className}TextContainer`}> 
             <h2 className={`${className}NewProductHeading`}> 

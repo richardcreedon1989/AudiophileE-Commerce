@@ -49,5 +49,4 @@ export const CartProvider = ({children}) => {
         </CartUpdateContext.Provider >
     </CartContext.Provider>
   )
-
 }

@@ -17,11 +17,11 @@ const Counter = (props) => {
           <span className="CounterPlus" onClick={() => setCount(count + 1)}> + </span>
         </div>
       </div>
-      <div onClick={() => {
+      <div style={{display: "none"}} onClick={() => {
         updateCart({quantity: count, id: props.params})
         setCount(0)
         }}>
-        <Button  text={"ADD TO CART"} />
+        <Button   text={"ADD TO CART"} />
       </div>
     </div>
   )
