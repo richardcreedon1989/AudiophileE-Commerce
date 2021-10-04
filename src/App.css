@@ -51,8 +51,8 @@ body {
   transform: translate(-50%, 0);
   background-color: white;
   z-index: 1;
-  width: 90%;
-  border-radius: 10px;
+  width:80%;
+  border-radius: 5px;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 50px;

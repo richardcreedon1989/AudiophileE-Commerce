@@ -1,14 +1,15 @@
 import "./CartIconSummary.css"
-import {useCart} from "../Contexts/CartContext"
-
+import {useCart, useCartDelete} from "../Contexts/CartContext"
+//                               ----    Need to make Delete Context    -----
 const className = "CartIconSummary"
 
 const CartIconSummary = ({data}) => {
 
+  const deleteCart = useCartDelete()
   const cart = useCart()
+
   let cartTotal = 0
   let vat = cartTotal * .23.toFixed(2)
-
   const displayCartItems = () => {
     return cart && cart.map((cartItem, index) => {
       return data && data.map((dataItem) => {
@@ -40,8 +41,14 @@ const CartIconSummary = ({data}) => {
     })
   }
 
+
+  // NEED TO MAKE DELETE CONTEXT 
   return (
     <>
+    <div className={`${className}CartDeleteContainer`}> 
+        <div className={`${className}CartQuantity`}> CART(3) </div>
+        <div className={`${className}CartDelete`} onClick={() => deleteCart([])}> Remove all </div>
+    </div>
     {displayCartItems()}
     </>
   )

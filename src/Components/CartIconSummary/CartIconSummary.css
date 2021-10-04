@@ -2,13 +2,34 @@
 .CartIconSummaryCartItemContainer {
   display: flex;
   flex-direction: row;
-  margin: 20px 10% 0 10%;
+  margin: 20px 0 0 0;
+}
+
+.CartIconSummaryCartDeleteContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.CartIconSummaryCartQuantity {
+order: 1;
+display: inline-block;
+width: 60%;
+}
+
+.CartIconSummaryCartDelete{
+order:2;
+display: inline-block;
+width: 40%;
+text-align: right;
 }
 
 .CartIconSummaryImageContainer {
     order: 1;
-  
 }
+
 
 .CartIconSummaryImage {
   height: 50px;
