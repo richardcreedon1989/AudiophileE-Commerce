@@ -5,7 +5,6 @@ import headsetPreview from "../../../assets/headset-preview.png"
 import earphonePreview from "../../../assets/earphone-preview.png"
 import {Link} from "react-router-dom"
 
-
 const className = "IndividualItem"
 
 const displayProducts = () => {
@@ -42,4 +41,4 @@ const IndividualItem = (props) => {
     )
 }
 
-export default IndividualItem;
+export default IndividualItem

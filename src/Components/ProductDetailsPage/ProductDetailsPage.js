@@ -35,7 +35,8 @@ const ProductDetailsPage = ({data}) => {
           <div className="menu-display" style={{display: isMenuDisplayed ? "" : "none"}}> 
               <IndividualItemList />
           </div>
-          <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
+          {/* <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}>  */}
+          <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}>
               <hr className="hrDesktop"/>
               <div className="desktop-width"> 
                   <div className="container-padding container-padding-product-details display-block"> 
@@ -46,9 +47,11 @@ const ProductDetailsPage = ({data}) => {
                       <ModelImage />
                   </div>
               </div>
-          </div>
-          <div className={isMenuDisplayed ? "Menu-Displayed-Background-Footer" : ""}> 
+          <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}>
+
               <Footer />
+              </div>
+
           </div>
         </>
   )

@@ -69,7 +69,7 @@ const SummaryPage = ({data}) => {
                 VAT(INCLUDED)
             </span>
             <span className={`${className}Amount`}>
-                ${vat ? vat : 0}
+                ${vat ? vat.toFixed(0) : 0}
             </span>
         </div>
         <div className={`${className}TextContainer`}> 

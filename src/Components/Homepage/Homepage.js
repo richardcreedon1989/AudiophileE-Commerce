@@ -56,17 +56,19 @@ const HomePage = ({data}) => {
             </div>
           </div>
         </div>
-        <div className={isMenuDisplayed ? "container-padding Menu-Displayed-Background" : "container-padding"}> 
-            <IndividualItemList />
-            <ProductTilesContainer />
-            <ModelImage />
-        </div>
-        <div className={isMenuDisplayed ? "Menu-Displayed-Background-Footer" : ""}> 
+        <div  className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
+            <div className="container-padding"> 
+                <IndividualItemList />
+                <ProductTilesContainer />
+                <ModelImage />
+            </div>
             <Footer/>
         </div>
     </div>
   )
 }
+
+
 
 export default HomePage
 

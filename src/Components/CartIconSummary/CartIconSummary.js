@@ -1,9 +1,10 @@
 import "./CartIconSummary.css"
 import {useCart, useCartDelete} from "../Contexts/CartContext"
 import {useState, useEffect} from "react"
-import Counter from "../Counter/Counter"
+import CounterIncrementer from "../CounterIncrementer/CounterIncrementer"
 import Button from "../Button/Button"
 import {Link} from "react-router-dom"
+
 const className = "CartIconSummary"
 
 const CartIconSummary = ({data}) => {
@@ -46,7 +47,7 @@ const CartIconSummary = ({data}) => {
                       </div>
                   </div>
                   <div className={`${className}CartItemQuantity`}> 
-                      <Counter />
+                      <CounterIncrementer id={dataItem.id} quantity={cartItem.quantity} />
                   </div>
               </div>
           )
