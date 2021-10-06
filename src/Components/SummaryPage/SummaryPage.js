@@ -1,6 +1,6 @@
 import "./SummaryPage.css"
 import {useCart} from "../Contexts/CartContext"
-
+import Button from "../Button/Button"
 const className = "SummaryPage"
 
 const SummaryPage = ({data}) => {
@@ -76,9 +76,12 @@ const SummaryPage = ({data}) => {
             <span className={`${className}Text`}>
                 GRAND TOTAL
             </span>
-            <span className={`${className}Amount`}>
+            <span className={`${className}Amount ${className}AmountColor `}>
                 ${cartTotal + 50}
             </span>
+        </div>
+        <div className={`${className}Button`}> 
+            <Button text="CONTINUE" theme="continue"/>      
         </div>
       </div>
   </div>

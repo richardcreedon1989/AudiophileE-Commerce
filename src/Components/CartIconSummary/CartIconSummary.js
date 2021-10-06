@@ -2,6 +2,8 @@ import "./CartIconSummary.css"
 import {useCart, useCartDelete} from "../Contexts/CartContext"
 import {useState, useEffect} from "react"
 import Counter from "../Counter/Counter"
+import Button from "../Button/Button"
+import {Link} from "react-router-dom"
 const className = "CartIconSummary"
 
 const CartIconSummary = ({data}) => {
@@ -63,13 +65,18 @@ const CartIconSummary = ({data}) => {
     </div>
     {displayCartItems()}
     <div className={`${className}TextContainer`}> 
-            <span className={`${className}Text`}>
-                TOTAL
-            </span>
-            <span className={`${className}Amount`}>
-                $
-            </span>
+        <span className={`${className}Text`}>
+            TOTAL
+        </span>
+        <span className={`${className}Amount`}>
+            $
+        </span>
+    </div>
+    <Link to="/audiophile-ecommerce/CheckoutPage" > 
+    <div className={`${className}Button`}> 
+            <Button text="CONTINUE" theme="continue"/>      
         </div>
+    </Link>
     </>
   )
 }

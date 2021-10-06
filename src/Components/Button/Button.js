@@ -7,6 +7,8 @@ const Button = ({theme, text}) => {
             return "btnProductInfoOrangeTheme"
         } else if (theme === "black") {
             return "btnProductInfoBlackTheme"
+        } else if (theme === "continue") {
+            return "btnProductInfoOrangeThemeContinue"
         } else {
             return "btnProductInfoTransparentTheme"
         }

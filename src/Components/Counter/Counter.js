@@ -7,7 +7,7 @@ const Counter = (props) => {
   const [count, setCount] = useState(0)
 
   const updateCart = useCartUpdate()
-
+  // set width and height to 100% and control the button size with a div
   return (
     <div className="CounterButton">
       <div className="CounterContainer">
@@ -17,7 +17,7 @@ const Counter = (props) => {
           <span className="CounterPlus" onClick={() => setCount(count + 1)}> + </span>
         </div>
       </div>
-      <div style={{display: "none"}} onClick={() => {
+      <div onClick={() => {
         updateCart({quantity: count, id: props.params})
         setCount(0)
         }}>

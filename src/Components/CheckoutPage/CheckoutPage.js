@@ -2,6 +2,7 @@ import "./CheckoutPage.css"
 import {Formik, Form, useField, Field } from "formik"
 import * as Yup from 'yup';
 import SummaryPage from "../SummaryPage/SummaryPage";
+import Header from "../Header/Header"
 
 const className = "CheckoutPage"
 
@@ -63,7 +64,8 @@ const CheckoutPage = ({data}) => {
     
     > 
     {({values, errors, touched, handleBlur, handleReset}) => ( //Ctrl + Space brings up options ie initialValues 
-      
+    <>
+    <Header color="black" /> 
     <Form>    
       <div className={`${className}OuterContainer`}> 
         <div className={`${className}Container`}> 
@@ -158,7 +160,7 @@ const CheckoutPage = ({data}) => {
             label="e-Money Number"
             name="eMoney"
             id="eMoney"
-            type="number"
+            type="text"
             placeholder="246374765"
         />
 
@@ -166,18 +168,14 @@ const CheckoutPage = ({data}) => {
             label="e-Money PIN"
             name="eMoneyPin"
             id="eMoneyPin"
-            type="number"
+            type="text"
             placeholder="5674"
         />
-
- 
-
-            {console.log("values", values)}
-            {console.log("errors", errors)}
         </div>
         </div>
         <SummaryPage data={data} />
     </Form>
+    </>
       )}  
                     
       </Formik>
