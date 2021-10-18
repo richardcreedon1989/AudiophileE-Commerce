@@ -1,10 +1,16 @@
 import "./CounterIncrementer.css"
-import { useState } from "react"
-import { useCartUpdate} from "../Contexts/CartContext"
+import { useState, useEffect} from "react"
+import { useCartUpdate, useCart} from "../Contexts/CartContext"
 
 const CounterIncrementer = ({id, quantity}) => {
   const [count, setCount] = useState(quantity)
   const updateCart = useCartUpdate()
+  const cart = useCart()
+
+ 
+  useEffect (() => {
+
+  }, [ quantity])
 
   const increaseCount = () => {
       setCount(count + 1)
