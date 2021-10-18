@@ -32,7 +32,9 @@ const Header = (props) => {
             <div onClick={() => displayCartSummary()} className="iconCart"> 
                 <img  src={iconCart} alt="cart"/>
             </div>
-            <img className="iconLogo" src={iconLogo} alt="logo"/>
+            <Link className="iconLogo" to="/audiophile-ecommerce/"> 
+                <img  src={iconLogo} alt="logo"/>
+            </Link> 
         </nav>  
     )
 } 

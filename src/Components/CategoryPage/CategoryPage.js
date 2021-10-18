@@ -6,6 +6,7 @@ import ModelImage from "../ModelImage/ModelImage"
 import Footer from "../Footer/Footer"
 import "../../App.css"
 import CategoryProductList from "../CategoryProductList/CategoryProductList"
+import CartIconSummary from "../../Components/CartIconSummary/CartIconSummary"
 import {useParams} from "react-router-dom"
 import {useState, useEffect} from "react"
 
@@ -15,6 +16,7 @@ const CategoryPage = ({data}) => {
 
   const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
   const [windowSize, setWindowSize] = useState(currentWindowWidth)
+  const [isCartSummaryDisplayed, setIsCartSummaryDisplayed] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,14 +30,21 @@ const CategoryPage = ({data}) => {
     windowSize < 1000 && setIsMenuDisplayed(!isMenuDisplayed) 
   }
 
+  const displayCartSummary = () => {    
+    setIsCartSummaryDisplayed(!isCartSummaryDisplayed)
+  }
+
   const params = useParams()
   return (
       <div> 
-          <Header displayMenu={displayMenu} color="black"/>
+          <Header displayCartSummary={displayCartSummary} displayMenu={displayMenu} color="black"/>
           <div className="menu-display" style={{display: isMenuDisplayed ? "" : "none"}}> 
                 <IndividualItemList />
           </div>
-              <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
+          <div className="cart-display" style={{display: isCartSummaryDisplayed ? "" : "none"}}> 
+                <CartIconSummary data={data}/>
+          </div>
+          <div className={isMenuDisplayed ? "Menu-Displayed-Background" : ""}> 
               <hr className="hrDesktop" />
               <CategoryTitle category={params.Product}/>  
           </div>

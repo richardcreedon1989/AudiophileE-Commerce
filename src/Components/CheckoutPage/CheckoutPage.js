@@ -1,7 +1,10 @@
 import "./CheckoutPage.css"
+import {useState} from "react"
 import {Formik, Form, useField, Field } from "formik"
 import * as Yup from 'yup';
 import SummaryPage from "../SummaryPage/SummaryPage";
+import CartIconSummary from "../../Components/CartIconSummary/CartIconSummary"
+import IndividualItemList from "../ShopItemList/IndividualItem/IndividualItem"
 import Header from "../Header/Header"
 
 const className = "CheckoutPage"
@@ -57,6 +60,21 @@ const MyTextInput = ({ label, ...props }) => {
 };
 
 const CheckoutPage = ({data}) => {
+
+  let currentWindowWidth = window.innerWidth
+
+  const [isMenuDisplayed, setIsMenuDisplayed] = useState(false)
+  const [isCartSummaryDisplayed, setIsCartSummaryDisplayed] = useState(false)
+  const [windowSize, setWindowSize] = useState(currentWindowWidth)
+
+  const displayMenu = () => {
+    windowSize < 1000 && setIsMenuDisplayed(!isMenuDisplayed) 
+  }
+
+  const displayCartSummary = () => {    
+    setIsCartSummaryDisplayed(!isCartSummaryDisplayed)
+  }
+
   return (
     <Formik
       initialValues={initialValues}
@@ -65,7 +83,13 @@ const CheckoutPage = ({data}) => {
     > 
     {({values, errors, touched, handleBlur, handleReset}) => ( //Ctrl + Space brings up options ie initialValues 
     <>
-    <Header color="black" /> 
+    <Header displayCartSummary={displayCartSummary} displayMenu={displayMenu} color="black" /> 
+    <div className="menu-display" style={{display: isMenuDisplayed ? "" : "none"}}> 
+              <IndividualItemList />
+          </div>
+          <div className="cart-display" style={{display: isCartSummaryDisplayed ? "" : "none"}}> 
+                <CartIconSummary data={data}/>
+          </div>
     <Form>    
       <div className={`${className}OuterContainer`}> 
         <div className={`${className}Container`}> 
