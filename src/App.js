@@ -8,7 +8,7 @@ import axios from "axios"
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import {CartProvider} from "./Components/Contexts/CartContext"
 
-
+// ---------------------          COunterIncrementer has info on whast going wrong !!!!!!!      -----------------------------
 function App() {
 
   const [data, setData] = useState()

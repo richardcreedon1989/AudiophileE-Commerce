@@ -57,6 +57,7 @@ body {
   padding-right: 5%;
   padding-bottom: 50px;
   box-sizing: border-box;
+  max-width: 280px;
 }
 
 .Menu-Displayed-Background {

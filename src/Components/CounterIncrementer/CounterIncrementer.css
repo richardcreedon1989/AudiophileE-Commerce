@@ -1,0 +1,48 @@
+.CounterIncrementerButton {
+  display: flex;
+}
+
+.CounterIncrementerContainer {
+  width: 80px;
+  height: 30px;
+  background-color: grey;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.CounterIncrementer {
+/* margin-top: 3px; */
+display: flex;
+flex-direction: row;
+align-items: center;
+text-align: center;
+margin-top: 2px;
+}
+
+.CounterIncrementerMinus {
+  /* margin-left: 12%; */
+  order: 1;
+  width: 25%;
+  margin-right: -5px;
+  margin-left: 3px;
+  height: 100%;
+
+}
+
+.CounterIncrementerNumber {
+  /* margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 0px;
+  padding-bottom: 2px; */
+  font-size: 12px;
+  order: 2;
+  width: 50%;
+}
+
+.CounterIncrementerPlus {
+  width: 25%;
+  order: 3;
+  margin-left: -5px;
+}
