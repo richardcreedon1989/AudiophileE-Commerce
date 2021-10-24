@@ -17,7 +17,7 @@ const displayProducts = () => {
                 {item.name.toUpperCase()}
                 </h5> 
 
-                <Link className={`${className}ShopLink`} to={`/audiophile-ecommerce/Category/:${item.name}`}> 
+                <Link className={`${className}ShopLink`} to={`/Category/:${item.name}`}> 
                 <p className={`${className}Shop`}> 
                     SHOP 
                     <img 
