@@ -21,10 +21,10 @@ const Header = (props) => {
     return (
         <nav className={`${headerBackground()} header`}> 
             <ul className="desktop-header">
-                <Link to="/audiophile-ecommerce/" className="desktop-menu-items"> HOME </Link>
-                <Link to="/audiophile-ecommerce/Category/:Headphones" className="desktop-menu-items"> HEADPHONES</Link>
-                <Link to="/audiophile-ecommerce/Category/:Speakers" className="desktop-menu-items"> SPEAKERS </Link>
-                <Link to="/audiophile-ecommerce/Category/:Earphones" className="desktop-menu-items"> EARPHONES</Link>
+                <Link to="/" className="desktop-menu-items"> HOME </Link>
+                <Link to="/Category/:Headphones" className="desktop-menu-items"> HEADPHONES</Link>
+                <Link to="/Category/:Speakers" className="desktop-menu-items"> SPEAKERS </Link>
+                <Link to="/Category/:Earphones" className="desktop-menu-items"> EARPHONES</Link>
             </ul>
             <div className="iconBurger" onClick={() => displayMenu()}>
                 <img  src={iconBurger} alt="menu"/>
@@ -32,7 +32,7 @@ const Header = (props) => {
             <div onClick={() => displayCartSummary()} className="iconCart"> 
                 <img  src={iconCart} alt="cart"/>
             </div>
-            <Link className="iconLogo" to="/audiophile-ecommerce/"> 
+            <Link className="iconLogo" to="/"> 
                 <img  src={iconLogo} alt="logo"/>
             </Link> 
         </nav>  

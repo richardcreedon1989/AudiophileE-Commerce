@@ -46,7 +46,7 @@ const RecommendedProducts = ({data, params}) => {
               <img className={`${className}Image`} src={`${process.env.PUBLIC_URL}${item.image[imageSizer()].slice(1)}`} alt="other products" /> 
               <h3 className={`${className}ProductHeading`}> {item.name} </h3>
               <div className={`${className}Button`}> 
-                  <Link to={`/audiophile-ecommerce/ProductDetails/:${goToRecommendedProduct()}`}> 
+                  <Link to={`/ProductDetails/:${goToRecommendedProduct()}`}> 
                       <Button theme="orange" /> 
                   </Link>
               </div>         

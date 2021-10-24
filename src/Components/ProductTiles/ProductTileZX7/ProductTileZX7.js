@@ -10,7 +10,7 @@ const ProductTileZX7 = () => {
                     <div className={`${className}ImageTextHeading`}> 
                         ZX7 SPEAKER 
                     </div>
-                    <Link to="/audiophile-ecommerce/ProductDetails/:5"> 
+                    <Link to="/ProductDetails/:5"> 
                         <Button theme="transparent" />                        
                     </Link>
                   </div>

@@ -10,7 +10,7 @@ const ProductTileYX1 = () => {
 						<div className={`${className}BackgroundImage`} />
 						<div className={`${className}ProductInfoContainer`}>
 								<h2 className={`${className}ProductText`} > YX1 EARPHONES </h2>	
-								<Link to="/audiophile-ecommerce/ProductDetails/:1"> 
+								<Link to="/ProductDetails/:1"> 
 										<Button />                       
                 </Link>
 						</div>

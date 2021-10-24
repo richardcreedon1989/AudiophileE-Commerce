@@ -14,7 +14,7 @@ const ProductTileZX9 = () => {
                   <p className={`${className}TextParagraph`}>
                       Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
                   </p>
-                  <Link to="/audiophile-ecommerce/ProductDetails/:6"> 
+                  <Link to="/ProductDetails/:6"> 
                       <Button theme="black" /> 
                   </Link>
             </div>

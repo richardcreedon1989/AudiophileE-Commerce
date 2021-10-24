@@ -15,7 +15,7 @@ const NewProductDisplay = () => {
             Experience natural, lifelike audio and exceptional build quality made for 
             the passionate music enthusiast.
             </p>
-            <Link to="/audiophile-ecommerce/ProductDetails/:4">
+            <Link to="/ProductDetails/:4">
                 <Button theme="orange" />
             </Link>     
         </div>

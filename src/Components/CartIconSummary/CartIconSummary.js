@@ -79,7 +79,7 @@ const CartIconSummary = ({data}) => {
             $ {cartTotal}
         </span>
     </div>
-    <Link to="/audiophile-ecommerce/CheckoutPage" > 
+    <Link to="/CheckoutPage" > 
     <div className={`${className}Button`}> 
             <Button text="CONTINUE" theme="continue"/>      
         </div>

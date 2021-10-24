@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react"
 import HomePage from './Components/Homepage/Homepage';
 import CategoryPage from './Components/CategoryPage/CategoryPage';
 import ProductDetailsPage from "./Components/ProductDetailsPage/ProductDetailsPage"
-import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
+import {BrowserRouter, Route, Switch} from "react-router-dom"
 import axios from "axios"
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import {CartProvider} from "./Components/Contexts/CartContext"
@@ -18,7 +18,7 @@ import {CartProvider} from "./Components/Contexts/CartContext"
 
 //  5) scroll to top on new page
 
-//   6) purchase success page 
+//   6) purchase uccess page 
 function App() {
 
   const [data, setData] = useState()
@@ -36,14 +36,14 @@ function App() {
   return (
     <>
     <CartProvider> 
-        <Router> 
+        <BrowserRouter basename={process.env.PUBLIC_URL} > 
             <Switch> 
-                <Route path="/audiophile-ecommerce" exact component={() => <HomePage data={data} />} />
-                <Route path="/audiophile-ecommerce/Category/:Product"  component={() => <CategoryPage data={data} />} />
-                <Route path={`/audiophile-ecommerce/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
-                <Route path={`/audiophile-ecommerce/CheckoutPage`}  component={() => <CheckoutPage data={data} />}/>
+                <Route path="/" exact component={() => <HomePage data={data} />} />
+                <Route path="/Category/:Product"  component={() => <CategoryPage data={data} />} />
+                <Route path={`/ProductDetails/:id`}  component={() => <ProductDetailsPage data={data} />}/>
+                <Route path={`/CheckoutPage`}  component={() => <CheckoutPage data={data} />}/>
             </Switch>
-        </Router>
+        </BrowserRouter>
     </CartProvider>
       
     </>

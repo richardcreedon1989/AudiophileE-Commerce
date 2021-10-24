@@ -40,7 +40,7 @@ const IndividualCategoryProduct = (props) => {
                 {data ? data[index].description : ""}
             </p>
             <div className={`${className}Button`}>
-                <Link to={`/audiophile-ecommerce/ProductDetails/:${data[index].id}`}> 
+                <Link to={`/ProductDetails/:${data[index].id}`}> 
                     <Button theme="orange"/>
                 </Link>
             </div> 
