@@ -14,9 +14,9 @@
     },
     "category": "earphones",
     "categoryImage": {
-      "mobile": "/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
-      "tablet": "/assets/product-yx1-earphones/tablet/image-category-page-preview.jpg",
-      "desktop": "/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
+      "mobile": "./assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
+      "tablet": "./assets/product-yx1-earphones/tablet/image-category-page-preview.jpg",
+      "desktop": "./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg"
     },
     "new": true,
     "price": 599,
@@ -46,19 +46,19 @@
     ],
     "gallery": {
       "first": { 
-        "mobile": "/assets/product-yx1-earphones/mobile/image-gallery-1.jpg",
-        "tablet": "/assets/product-yx1-earphones/tablet/image-gallery-1.jpg",
-        "desktop": "/assets/product-yx1-earphones/desktop/image-gallery-1.jpg"
+        "mobile": "./assets/product-yx1-earphones/mobile/image-gallery-1.jpg",
+        "tablet": "./assets/product-yx1-earphones/tablet/image-gallery-1.jpg",
+        "desktop": "./assets/product-yx1-earphones/desktop/image-gallery-1.jpg"
       },
       "second": {
-        "mobile": "/assets/product-yx1-earphones/mobile/image-gallery-2.jpg",
-        "tablet": "/assets/product-yx1-earphones/tablet/image-gallery-2.jpg",
-        "desktop": "/assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
+        "mobile": "./assets/product-yx1-earphones/mobile/image-gallery-2.jpg",
+        "tablet": "./assets/product-yx1-earphones/tablet/image-gallery-2.jpg",
+        "desktop": "./assets/product-yx1-earphones/desktop/image-gallery-2.jpg"
       },
       "third": {
-        "mobile": "/assets/product-yx1-earphones/mobile/image-gallery-3.jpg",
-        "tablet": "/assets/product-yx1-earphones/tablet/image-gallery-3.jpg",
-        "desktop": "/assets/product-yx1-earphones/desktop/image-gallery-3.jpg"
+        "mobile": "./assets/product-yx1-earphones/mobile/image-gallery-3.jpg",
+        "tablet": "./assets/product-yx1-earphones/tablet/image-gallery-3.jpg",
+        "desktop": "./assets/product-yx1-earphones/desktop/image-gallery-3.jpg"
       }
     },
     "others": [

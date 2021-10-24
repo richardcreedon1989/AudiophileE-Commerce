@@ -35,11 +35,15 @@ export const CartProvider = ({children}) => {
     const checkForDuplicates = () => {
     let itemsToBeAdded
     return cart && cart.map((cartItem) => {
-      console.log("cartItem", cartItem)
-      if(cartItem && addedItems && cartItem.id !== addedItems.id) {
-      } else {
-          itemsToBeAdded = {id: cartItem.id, quantity: cartItem.quantity + addedItems.quantity} 
+   
+
+      if(cartItem && addedItems && cartItem.id === addedItems.id) {
+        itemsToBeAdded = {id: addedItems.id, quantity: cartItem.quantity + addedItems.quantity} 
+      } 
+      if(!itemsToBeAdded && cartItem && addedItems && cartItem.id !== addedItems.id) {
+        itemsToBeAdded = addedItems
       }
+      
       let removeDuplicate = cart.filter((item)=> {
         return item && addedItems && item.id !== addedItems.id
       })

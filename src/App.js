@@ -10,8 +10,6 @@ import {CartProvider} from "./Components/Contexts/CartContext"
 
 // ---------------------          TODO     -----------------------------
 
-//  1)Cart popup not updating the counter if the user goes back to products details and adds further products - works from counter though
-//    
 //  2) Grey out background of menu/cart when clicked 
 
 //  3) See Product still isnt fixed so following link doesnt work 

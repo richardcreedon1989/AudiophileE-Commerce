@@ -16,12 +16,12 @@ const CartIconSummary = ({data}) => {
   let cartTotal = 0
   let vat = cartTotal * .23.toFixed(2)
   let cartItemsTotal = 0
-  console.log("carty")
+
 
   useEffect (() => {
       setCartQuantity(cartItemsTotal)
       // updateQuantity(cartItemsTotal)
-  }, [cartItemsTotal, updateQuantity, cart])
+  }, [cartItemsTotal, updateQuantity])
 
   const removeCart = () => {
     deleteCart([])
@@ -32,7 +32,7 @@ const CartIconSummary = ({data}) => {
 
     return cart && cart.map((cartItem, index) => {
       return data && data.map((dataItem) => {
-          if(cartItem && dataItem && cartItem.id === dataItem.id) {
+          if(cartItem && dataItem && cartItem.id === dataItem.id && cartItem.quantity > 0) {
             cartTotal = cartTotal + dataItem.price * cartItem.quantity
             vat = vat + (dataItem.price * cartItem.quantity) * .23
             cartItemsTotal = cartItemsTotal + cartItem.quantity
@@ -48,13 +48,12 @@ const CartIconSummary = ({data}) => {
                           {dataItem.shortName}
                       </div>
                       <div className={`${className}CartItemPrice`}>
-                          ${dataItem.price}
+                          ${dataItem.price} 
                       </div>
                   </div>
                 </div> 
                 <div className={`${className}CartItemQuantity`}> 
                     <CounterIncrementer id={dataItem.id} quantity={cartItem.quantity} />
-                    {console.log("cartITemHERE", cartItem.quantity)}
                 </div>
               </div>
           )

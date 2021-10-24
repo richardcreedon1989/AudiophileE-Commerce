@@ -13,7 +13,7 @@ const SummaryPage = ({data}) => {
   const displayCartItems = () => {
       return cart && cart.map((cartItem, index) => {
         return data && data.map((dataItem) => {
-            if(cartItem.id === dataItem.id) {
+            if(cartItem.id === dataItem.id && cartItem.quantity > 0) {
               cartTotal = cartTotal + dataItem.price * cartItem.quantity
               vat = vat + (dataItem.price * cartItem.quantity) * .23
             return (

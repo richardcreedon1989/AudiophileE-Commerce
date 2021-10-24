@@ -13,14 +13,14 @@ const Counter = (props) => {
       <div className="CounterContainer">
         <div className="Counter">
           <span className="CounterMinus" onClick={() => setCount(count - 1)}> - </span>
-          {console.log("params", props.params)}
+          {/* {console.log("params", props.params)} */}
           <span className="CounterNumber"> {count > 0 ? count : 0} </span>
           <span className="CounterPlus" onClick={() => setCount(count + 1)}> + </span>
         </div>
       </div>
       <div onClick={() => {
         updateCart({quantity: count, id: props.params + 1})
-        console.log("params", props.params)
+        // console.log("paramsHERE", props.params)
         setCount(0)
         }}>
         <Button text={"ADD TO CART"} />
